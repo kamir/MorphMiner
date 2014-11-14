@@ -1,0 +1,141 @@
+package visualtools.connectors;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+/**
+ *
+ * @author kamir
+ */
+public class SOLRTool extends ClusterGateway {
+
+    static String ZK = "127.0.0.1:2181/solr";
+    static String SOLR = "127.0.0.1:8983/solr";
+    static String HOME = "/home/training";
+
+    static int SHARDS = 1;    
+    
+    public static String projectContext = null;
+        
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws IOException {
+
+        // We do the core management on the cluster.
+        // An SSH login to a GatewayNode is required.
+        
+        String collection = "FAQMails02";
+        
+//        SOLRTool.init( "training01.mtv.cloudera.com" , "mirko.kaempf" , "MUvup3uT" );
+        SOLRTool.init( "172.16.14.185" , "cloudera" , "cloudera" );
+        SOLRTool.prepareCollection( "172.16.14.185:2181/solr", collection );
+        // SOLRTool.uploadAndPublish( collection );
+        
+        SOLRTool.close();
+        
+        bw.flush();
+        
+        System.exit( 0 );
+        
+    }    
+    
+    public static void prepareCollection(String coll) {
+        // SOLR configuration
+        ZK = "training01.mtv.cloudera.com:2181/solr";
+        prepareCollection(ZK, coll);   
+    }
+
+    public static void prepareCollection(String zk, String coll) {
+         
+        String cmd1 = "solrctl --solr " + SOLR + " --zk " + ZK + " instancedir --generate " + HOME + "/" + coll + "SearchConfig";
+        String cmd2 = "solrctl --solr " + SOLR + " --zk " + ZK + " instancedir --create " + coll + "Collection " + HOME + "/" + coll + "SearchConfig";
+        String cmd3 = "solrctl --solr " + SOLR + " --zk " + ZK + " collection --create " + coll + "Collection -s " + SHARDS; 
+
+        if ( bw != null ) {
+            try {
+                bw.write(cmd1 + "\n");
+                bw.write(cmd2 + "\n");
+                bw.write(cmd3 + "\n");
+            } 
+            catch (IOException ex) {
+                Logger.getLogger(SOLRTool.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
+        tool.open();
+        
+        tool.executeRemoteCommand( cmd1 );
+        
+        tool.executeRemoteCommand( cmd2 );
+
+        tool.executeRemoteCommand( cmd3 );
+
+        tool.executeRemoteCommand( "ls " + HOME );
+        
+        tool.executeRemoteCommand( "solrctl collection --list");
+       
+        tool.close();
+        
+        downloadSchema( HOME + "/" + coll + "SearchConfig" );      
+       
+    }
+
+    public static void uploadAndPublish(String coll) {
+
+        // copy the localy changed shema file 
+        String fnRemote = HOME + "/" + coll + "SearchConfig/conf/schema.xml";
+        String fnLocal = projectContext + "/conf/schema.xml";
+
+        System.out.println("Project context : " + projectContext);
+        System.out.println("local file      : " + fnLocal);
+        System.out.println("remote file     : " + fnRemote);
+        
+        String cmd3 = "solrctl --solr " + SOLR + " --zk " + ZK + " instancedir --update " + coll + "Collection " + HOME + "/" + coll + "SearchConfig"; // -s " + SHARDS; 
+        String cmd4 = "solrctl --solr " + SOLR + " --zk " + ZK + " collection --reload " + coll + "Collection"; // -s " + SHARDS; 
+
+        tool.open();
+        tool.scpTo(fnLocal, fnRemote, cmd3);
+        tool.executeRemoteCommand(cmd4);
+        
+        if ( bw != null ) {
+            try {
+                bw.write(cmd3 + "\n");
+                bw.write(cmd4 + "\n");
+            } 
+            catch (IOException ex) {
+                Logger.getLogger(SOLRTool.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    
+    }
+
+    public static void downloadSchema(String path) {
+        
+        // remote file 
+        String fnRemote = path + "/conf/schema.xml";
+        String fnLocal = projectContext + "/conf/schema.xml";
+        
+        javax.swing.JOptionPane.showMessageDialog(
+                null, "Please copy: " + fnRemote + "\nto" + fnLocal);
+        
+    }
+
+    public static void setProjectContext(File selectedFile) {
+        projectContext = selectedFile.getAbsolutePath();
+    }
+
+    public static void flushDebugScript() throws IOException {
+        bw.flush();
+        bw.close();
+        initDebugScripter();
+    }
+
+    public static void closeDebugScript() throws IOException {
+        bw.flush();
+        bw.close();
+    }
+    
+}
