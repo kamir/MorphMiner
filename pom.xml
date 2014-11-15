@@ -238,15 +238,14 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>${mavenassembly.version}</version>
                 <configuration>
-                    <descriptors>
-                        <descriptor>src/main/assembly/hadoop-job.xml</descriptor>
-                    </descriptors>
                     <archive>
                         <manifest>
-                            <!-- What is the Main-Class to run? -->
-                            <mainClass>org.apache.crunchts.CrunchTSApp</mainClass>
+                            <mainClass>de.bitocean.mm.MMApp</mainClass>
                         </manifest>
                     </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
                 </configuration>
                 <executions>
                     <execution>
@@ -286,22 +285,7 @@
             </plugin>
             
             
-            
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>de.bitocean.mm.MorphMinerTool</mainClass>
-                        </manifest>
-                    </archive>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                </configuration>
-            </plugin>
-            
-            
+    
 
         </plugins>
     </build> 

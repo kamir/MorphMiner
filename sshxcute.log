@@ -1,0 +1,188 @@
+
+=============== [2014/11/14 21:26:10, net.neoremind.sshxcute.core.SSHExec.<clinit>:80] ====================
+
+[21:26:10] INFO:    SSHExec initializing ...
+[21:26:10] INFO:    Session initialized and associated with user credential cloudera
+[21:26:10] INFO:    SSHExec initialized successfully
+[21:26:10] INFO:    SSHExec trying to connect cloudera@172.16.14.185
+[21:26:34] INFO:    SSH connection established
+[21:26:34] INFO:    SSH connection shutdown
+[21:32:04] INFO:    Session initialized and associated with user credential cloudera
+[21:32:04] INFO:    SSHExec initialized successfully
+[21:32:04] INFO:    SSHExec trying to connect cloudera@172.16.14.185
+[21:32:14] INFO:    SSH connection established
+[21:32:14] INFO:    Session initialized and associated with user credential cloudera
+[21:32:14] INFO:    SSHExec initialized successfully
+[21:32:14] INFO:    SSHExec trying to connect cloudera@172.16.14.185
+[21:32:24] INFO:    SSH connection established
+[21:32:24] INFO:    Ready to transfer local file '/Users/kamir/Documents/Cloudera/github/MorphMiner/morphline-projects/FAQMails02/conf/schema.xml' to server directory '/home/training/FAQMails02SearchConfig/conf/schema.xml'
+[21:32:25] INFO:    Connection channel established succesfully
+[21:32:25] INFO:    Start to upload
+[21:32:25] INFO:    Upload success
+[21:32:25] INFO:    channel disconnect
+[21:32:25] INFO:    Command is solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr instancedir --update FAQMails02Collection /home/training/FAQMails02SearchConfig
+[21:32:25] INFO:    Connection channel established succesfully
+[21:32:25] INFO:    Start to run command
+[21:32:26] INFO:    Uploading configs from /home/training/FAQMails02SearchConfig/conf to 127.0.0.1:2181/solr. This may take up to a minute.
+
+[21:32:27] INFO:    Connection channel closed
+[21:32:27] INFO:    Check if exec success or not ... 
+[21:32:27] INFO:    Execute successfully for command: solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr instancedir --update FAQMails02Collection /home/training/FAQMails02SearchConfig
+[21:32:27] INFO:    Now wait 5 seconds to begin next task ...
+[21:32:32] INFO:    Connection channel disconnect
+[21:32:32] INFO:    Command is solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr collection --reload FAQMails02Collection
+[21:32:32] INFO:    Connection channel established succesfully
+[21:32:32] INFO:    Start to run command
+[21:32:33] INFO:    Connection channel closed
+[21:32:33] INFO:    Check if exec success or not ... 
+[21:32:33] INFO:    Execute successfully for command: solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr collection --reload FAQMails02Collection
+[21:32:33] INFO:    Now wait 5 seconds to begin next task ...
+[21:32:38] INFO:    Connection channel disconnect
+[21:42:10] INFO:    Session initialized and associated with user credential cloudera
+[21:42:10] INFO:    SSHExec initialized successfully
+[21:42:10] INFO:    SSHExec trying to connect cloudera@172.16.14.185
+[21:42:20] INFO:    SSH connection established
+[21:42:20] INFO:    Session initialized and associated with user credential cloudera
+[21:42:20] INFO:    SSHExec initialized successfully
+[21:42:20] INFO:    SSHExec trying to connect cloudera@172.16.14.185
+[21:42:30] INFO:    SSH connection established
+[21:42:30] INFO:    Ready to transfer local file '/Users/kamir/Documents/Cloudera/github/MorphMiner/morphline-projects/FAQMails02/conf/schema.xml' to server directory '/home/training/FAQMails02SearchConfig/conf/schema.xml'
+[21:42:30] INFO:    Connection channel established succesfully
+[21:42:30] INFO:    Start to upload
+[21:42:30] INFO:    Upload success
+[21:42:30] INFO:    channel disconnect
+[21:42:30] INFO:    Command is solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr instancedir --update FAQMails02Collection /home/training/FAQMails02SearchConfig
+[21:42:30] INFO:    Connection channel established succesfully
+[21:42:30] INFO:    Start to run command
+[21:42:31] INFO:    Uploading configs from /home/training/FAQMails02SearchConfig/conf to 127.0.0.1:2181/solr. This may take up to a minute.
+
+[21:42:32] INFO:    Connection channel closed
+[21:42:32] INFO:    Check if exec success or not ... 
+[21:42:32] INFO:    Execute successfully for command: solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr instancedir --update FAQMails02Collection /home/training/FAQMails02SearchConfig
+[21:42:32] INFO:    Now wait 5 seconds to begin next task ...
+[21:42:37] INFO:    Connection channel disconnect
+[21:42:37] INFO:    Command is solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr collection --reload FAQMails02Collection
+[21:42:38] INFO:    Connection channel established succesfully
+[21:42:38] INFO:    Start to run command
+[21:42:38] INFO:    Connection channel closed
+[21:42:38] INFO:    Check if exec success or not ... 
+[21:42:38] INFO:    Execute successfully for command: solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr collection --reload FAQMails02Collection
+[21:42:38] INFO:    Now wait 5 seconds to begin next task ...
+[21:42:43] INFO:    Connection channel disconnect
+[21:43:39] INFO:    Session initialized and associated with user credential cloudera
+[21:43:39] INFO:    SSHExec initialized successfully
+[21:43:39] INFO:    SSHExec trying to connect cloudera@172.16.14.185
+[21:43:49] INFO:    SSH connection established
+[21:43:49] INFO:    Session initialized and associated with user credential cloudera
+[21:43:49] INFO:    SSHExec initialized successfully
+[21:43:49] INFO:    SSHExec trying to connect cloudera@172.16.14.185
+[21:43:59] INFO:    SSH connection established
+[21:43:59] INFO:    Ready to transfer local file '/Users/kamir/Documents/Cloudera/github/MorphMiner/morphline-projects/FAQMails02/conf/schema.xml' to server directory '/home/training/FAQMails02SearchConfig/conf/schema.xml'
+[21:43:59] INFO:    Connection channel established succesfully
+[21:43:59] INFO:    Start to upload
+[21:43:59] INFO:    Upload success
+[21:43:59] INFO:    channel disconnect
+[21:43:59] INFO:    Command is solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr instancedir --update FAQMails02Collection /home/training/FAQMails02SearchConfig
+[21:43:59] INFO:    Connection channel established succesfully
+[21:43:59] INFO:    Start to run command
+[21:44:00] INFO:    Uploading configs from /home/training/FAQMails02SearchConfig/conf to 127.0.0.1:2181/solr. This may take up to a minute.
+
+[21:44:01] INFO:    Connection channel closed
+[21:44:01] INFO:    Check if exec success or not ... 
+[21:44:01] INFO:    Execute successfully for command: solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr instancedir --update FAQMails02Collection /home/training/FAQMails02SearchConfig
+[21:44:01] INFO:    Now wait 5 seconds to begin next task ...
+[21:44:06] INFO:    Connection channel disconnect
+[21:44:06] INFO:    Command is solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr collection --reload FAQMails02Collection
+[21:44:06] INFO:    Connection channel established succesfully
+[21:44:06] INFO:    Start to run command
+[21:44:07] INFO:    Error: A call to SolrCloud WEB APIs failed: HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: application/xml;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 14 Nov 2014 21:44:07 GMT
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<response>
+
+<lst name="responseHeader">
+<int name="status">
+0</int>
+<int name="QTime">
+504</int>
+</lst>
+<lst name="failure">
+<str name="localhost.localdomain:8983_solr">
+org.apache.solr.client.solrj.impl.HttpSolrServer$RemoteSolrException:Server at http://localhost.localdomain:8983/solr returned non ok status:500, message:Internal Server Error</str>
+</lst>
+
+</response>
+
+[21:44:07] INFO:    Connection channel closed
+[21:44:07] INFO:    Check if exec success or not ... 
+[21:44:07] INFO:    Execution failed while executing command: solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr collection --reload FAQMails02Collection
+[21:44:07] INFO:    Error message: 
+[21:44:07] INFO:    Now wait 5 seconds to begin next task ...
+[21:44:12] INFO:    Connection channel disconnect
+[21:51:07] INFO:    Session initialized and associated with user credential cloudera
+[21:51:07] INFO:    SSHExec initialized successfully
+[21:51:07] INFO:    SSHExec trying to connect cloudera@172.16.14.185
+[21:51:17] INFO:    SSH connection established
+[21:51:17] INFO:    Session initialized and associated with user credential cloudera
+[21:51:17] INFO:    SSHExec initialized successfully
+[21:51:17] INFO:    SSHExec trying to connect cloudera@172.16.14.185
+[21:51:27] INFO:    SSH connection established
+[21:51:27] INFO:    Ready to transfer local file '/Users/kamir/Documents/Cloudera/github/MorphMiner/morphline-projects/FAQMails02/conf/schema.xml' to server directory '/home/training/FAQMails02SearchConfig/conf/schema.xml'
+[21:51:27] INFO:    Connection channel established succesfully
+[21:51:27] INFO:    Start to upload
+[21:51:28] INFO:    Upload success
+[21:51:28] INFO:    channel disconnect
+[21:51:28] INFO:    Command is solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr instancedir --update FAQMails02Collection /home/training/FAQMails02SearchConfig
+[21:51:28] INFO:    Connection channel established succesfully
+[21:51:28] INFO:    Start to run command
+[21:51:28] INFO:    Uploading configs from /home/training/FAQMails02SearchConfig/conf to 127.0.0.1:2181/solr. This may take up to a minute.
+
+[21:51:29] INFO:    Connection channel closed
+[21:51:29] INFO:    Check if exec success or not ... 
+[21:51:29] INFO:    Execute successfully for command: solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr instancedir --update FAQMails02Collection /home/training/FAQMails02SearchConfig
+[21:51:29] INFO:    Now wait 5 seconds to begin next task ...
+[21:51:34] INFO:    Connection channel disconnect
+[21:51:34] INFO:    Command is solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr collection --reload FAQMails02Collection
+[21:51:34] INFO:    Connection channel established succesfully
+[21:51:34] INFO:    Start to run command
+[21:51:35] INFO:    Connection channel closed
+[21:51:35] INFO:    Check if exec success or not ... 
+[21:51:35] INFO:    Execute successfully for command: solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr collection --reload FAQMails02Collection
+[21:51:35] INFO:    Now wait 5 seconds to begin next task ...
+[21:51:40] INFO:    Connection channel disconnect
+[21:54:42] INFO:    Session initialized and associated with user credential cloudera
+[21:54:42] INFO:    SSHExec initialized successfully
+[21:54:42] INFO:    SSHExec trying to connect cloudera@172.16.14.185
+[21:54:52] INFO:    SSH connection established
+[21:54:52] INFO:    Session initialized and associated with user credential cloudera
+[21:54:52] INFO:    SSHExec initialized successfully
+[21:54:52] INFO:    SSHExec trying to connect cloudera@172.16.14.185
+[21:55:02] INFO:    SSH connection established
+[21:55:02] INFO:    Ready to transfer local file '/Users/kamir/Documents/Cloudera/github/MorphMiner/morphline-projects/FAQMails02/conf/schema.xml' to server directory '/home/training/FAQMails02SearchConfig/conf/schema.xml'
+[21:55:02] INFO:    Connection channel established succesfully
+[21:55:02] INFO:    Start to upload
+[21:55:02] INFO:    Upload success
+[21:55:02] INFO:    channel disconnect
+[21:55:02] INFO:    Command is solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr instancedir --update FAQMails02Collection /home/training/FAQMails02SearchConfig
+[21:55:02] INFO:    Connection channel established succesfully
+[21:55:02] INFO:    Start to run command
+[21:55:02] INFO:    Uploading configs from /home/training/FAQMails02SearchConfig/conf to 127.0.0.1:2181/solr. This may take up to a minute.
+
+[21:55:03] INFO:    Connection channel closed
+[21:55:03] INFO:    Check if exec success or not ... 
+[21:55:03] INFO:    Execute successfully for command: solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr instancedir --update FAQMails02Collection /home/training/FAQMails02SearchConfig
+[21:55:03] INFO:    Now wait 5 seconds to begin next task ...
+[21:55:08] INFO:    Connection channel disconnect
+[21:55:08] INFO:    Command is solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr collection --reload FAQMails02Collection
+[21:55:08] INFO:    Connection channel established succesfully
+[21:55:08] INFO:    Start to run command
+[21:55:09] INFO:    Connection channel closed
+[21:55:09] INFO:    Check if exec success or not ... 
+[21:55:09] INFO:    Execute successfully for command: solrctl --solr 127.0.0.1:8983/solr --zk 127.0.0.1:2181/solr collection --reload FAQMails02Collection
+[21:55:09] INFO:    Now wait 5 seconds to begin next task ...
+[21:55:14] INFO:    Connection channel disconnect
