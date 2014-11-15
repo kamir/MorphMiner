@@ -6396,3 +6396,177 @@ java.net.SocketException: Host is down
 	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:276)
 	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:958)
 	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:993)
+2014-11-15 11:59:48,079 INFO org.apache.zookeeper.ClientCnxn: Opening socket connection to server cdh42/192.168.28.137:2181. Will not attempt to authenticate using SASL (unknown error)
+2014-11-15 11:59:48,080 ERROR org.apache.zookeeper.ClientCnxnSocketNIO: Unable to open socket to cdh42/192.168.28.137:2181
+2014-11-15 11:59:48,080 WARN org.apache.zookeeper.ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:266)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:958)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:993)
+2014-11-15 11:59:49,181 INFO org.apache.zookeeper.ClientCnxn: Opening socket connection to server cdh42/192.168.28.137:2181. Will not attempt to authenticate using SASL (unknown error)
+2014-11-15 11:59:49,182 ERROR org.apache.zookeeper.ClientCnxnSocketNIO: Unable to open socket to cdh42/192.168.28.137:2181
+2014-11-15 11:59:49,182 WARN org.apache.zookeeper.ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:266)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:958)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:993)
+2014-11-15 11:59:50,285 INFO org.apache.zookeeper.ClientCnxn: Opening socket connection to server cdh42/192.168.28.137:2181. Will not attempt to authenticate using SASL (unknown error)
+2014-11-15 11:59:50,285 ERROR org.apache.zookeeper.ClientCnxnSocketNIO: Unable to open socket to cdh42/192.168.28.137:2181
+2014-11-15 11:59:50,285 WARN org.apache.zookeeper.ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:266)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:958)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:993)
+2014-11-15 11:59:51,388 INFO org.apache.zookeeper.ClientCnxn: Opening socket connection to server cdh42/192.168.28.137:2181. Will not attempt to authenticate using SASL (unknown error)
+2014-11-15 11:59:51,388 ERROR org.apache.zookeeper.ClientCnxnSocketNIO: Unable to open socket to cdh42/192.168.28.137:2181
+2014-11-15 11:59:51,389 WARN org.apache.zookeeper.ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:266)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:958)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:993)
+2014-11-15 11:59:52,494 INFO org.apache.zookeeper.ClientCnxn: Opening socket connection to server cdh42/192.168.28.137:2181. Will not attempt to authenticate using SASL (unknown error)
+2014-11-15 11:59:52,495 ERROR org.apache.zookeeper.ClientCnxnSocketNIO: Unable to open socket to cdh42/192.168.28.137:2181
+2014-11-15 11:59:52,495 WARN org.apache.zookeeper.ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:266)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:958)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:993)
+2014-11-15 11:59:53,597 INFO org.apache.zookeeper.ClientCnxn: Opening socket connection to server cdh42/192.168.28.137:2181. Will not attempt to authenticate using SASL (unknown error)
+2014-11-15 11:59:53,597 ERROR org.apache.zookeeper.ClientCnxnSocketNIO: Unable to open socket to cdh42/192.168.28.137:2181
+2014-11-15 11:59:53,597 WARN org.apache.zookeeper.ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:266)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:958)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:993)
+2014-11-15 11:59:54,699 INFO org.apache.zookeeper.ClientCnxn: Opening socket connection to server cdh42/192.168.28.137:2181. Will not attempt to authenticate using SASL (unknown error)
+2014-11-15 11:59:54,699 ERROR org.apache.zookeeper.ClientCnxnSocketNIO: Unable to open socket to cdh42/192.168.28.137:2181
+2014-11-15 11:59:54,699 WARN org.apache.zookeeper.ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:266)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:958)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:993)
+2014-11-15 11:59:55,801 INFO org.apache.zookeeper.ClientCnxn: Opening socket connection to server cdh42/192.168.28.137:2181. Will not attempt to authenticate using SASL (unknown error)
+2014-11-15 11:59:57,801 INFO org.apache.zookeeper.ClientCnxn: Client session timed out, have not heard from server in 3000ms for sessionid 0x0, closing socket connection and attempting reconnect
+2014-11-15 11:59:58,904 INFO org.apache.zookeeper.ClientCnxn: Opening socket connection to server cdh42/192.168.28.137:2181. Will not attempt to authenticate using SASL (unknown error)
+2014-11-15 12:00:00,903 INFO org.apache.zookeeper.ClientCnxn: Client session timed out, have not heard from server in 3001ms for sessionid 0x0, closing socket connection and attempting reconnect
+2014-11-15 12:00:02,004 INFO org.apache.zookeeper.ClientCnxn: Opening socket connection to server cdh42/192.168.28.137:2181. Will not attempt to authenticate using SASL (unknown error)
+2014-11-15 12:00:04,004 INFO org.apache.zookeeper.ClientCnxn: Client session timed out, have not heard from server in 3000ms for sessionid 0x0, closing socket connection and attempting reconnect
+2014-11-15 12:00:05,106 INFO org.apache.zookeeper.ClientCnxn: Opening socket connection to server cdh42/192.168.28.137:2181. Will not attempt to authenticate using SASL (unknown error)
+2014-11-15 12:00:05,107 ERROR org.apache.zookeeper.ClientCnxnSocketNIO: Unable to open socket to cdh42/192.168.28.137:2181
+2014-11-15 12:00:05,107 WARN org.apache.zookeeper.ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:266)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:958)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:993)
+2014-11-15 12:00:06,209 INFO org.apache.zookeeper.ClientCnxn: Opening socket connection to server cdh42/192.168.28.137:2181. Will not attempt to authenticate using SASL (unknown error)
+2014-11-15 12:00:06,210 ERROR org.apache.zookeeper.ClientCnxnSocketNIO: Unable to open socket to cdh42/192.168.28.137:2181
+2014-11-15 12:00:06,211 WARN org.apache.zookeeper.ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:266)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:958)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:993)
+2014-11-15 12:00:07,312 INFO org.apache.zookeeper.ClientCnxn: Opening socket connection to server cdh42/192.168.28.137:2181. Will not attempt to authenticate using SASL (unknown error)
+2014-11-15 12:00:07,312 ERROR org.apache.zookeeper.ClientCnxnSocketNIO: Unable to open socket to cdh42/192.168.28.137:2181
+2014-11-15 12:00:07,312 WARN org.apache.zookeeper.ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:266)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:958)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:993)
+2014-11-15 12:00:08,414 INFO org.apache.zookeeper.ClientCnxn: Opening socket connection to server cdh42/192.168.28.137:2181. Will not attempt to authenticate using SASL (unknown error)
+2014-11-15 12:00:08,415 ERROR org.apache.zookeeper.ClientCnxnSocketNIO: Unable to open socket to cdh42/192.168.28.137:2181
+2014-11-15 12:00:08,415 WARN org.apache.zookeeper.ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:266)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:958)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:993)
+2014-11-15 12:00:09,517 INFO org.apache.zookeeper.ClientCnxn: Opening socket connection to server cdh42/192.168.28.137:2181. Will not attempt to authenticate using SASL (unknown error)
+2014-11-15 12:00:09,518 ERROR org.apache.zookeeper.ClientCnxnSocketNIO: Unable to open socket to cdh42/192.168.28.137:2181
+2014-11-15 12:00:09,518 WARN org.apache.zookeeper.ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:266)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:958)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:993)
+2014-11-15 12:00:10,620 INFO org.apache.zookeeper.ClientCnxn: Opening socket connection to server cdh42/192.168.28.137:2181. Will not attempt to authenticate using SASL (unknown error)
+2014-11-15 12:00:10,621 ERROR org.apache.zookeeper.ClientCnxnSocketNIO: Unable to open socket to cdh42/192.168.28.137:2181
+2014-11-15 12:00:10,621 WARN org.apache.zookeeper.ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:266)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:958)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:993)
+2014-11-15 12:00:11,723 INFO org.apache.zookeeper.ClientCnxn: Opening socket connection to server cdh42/192.168.28.137:2181. Will not attempt to authenticate using SASL (unknown error)
+2014-11-15 12:00:11,723 ERROR org.apache.zookeeper.ClientCnxnSocketNIO: Unable to open socket to cdh42/192.168.28.137:2181
+2014-11-15 12:00:11,723 WARN org.apache.zookeeper.ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:465)
+	at sun.nio.ch.Net.connect(Net.java:457)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:670)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:266)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:276)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:958)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:993)
