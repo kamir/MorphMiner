@@ -96,7 +96,7 @@ public class MMApp extends javax.swing.JFrame {
 
         jMenu1.setText("MorphMiner");
 
-        jMenuItem1.setText("create new morphline project ...");
+        jMenuItem1.setText("open MorphMiner tool ...");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
