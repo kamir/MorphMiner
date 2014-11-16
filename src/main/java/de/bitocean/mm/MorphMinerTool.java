@@ -154,10 +154,8 @@ public class MorphMinerTool extends javax.swing.JFrame {
         jSplitPane2.setDividerLocation(428);
         jSplitPane2.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jPanel2.setPreferredSize(null);
         jPanel2.setLayout(new java.awt.BorderLayout());
 
-        jPanel10.setPreferredSize(null);
         jPanel10.setLayout(new java.awt.BorderLayout());
 
         dataflowDescriptors.setBackground(new java.awt.Color(255, 255, 255));
@@ -339,7 +337,7 @@ public class MorphMinerTool extends javax.swing.JFrame {
 
         manageTabs.addTab("Project", projectLocation);
 
-        jtfGW.setText("172.16.14.185");
+        jtfGW.setText("127.0.0.1");
 
         jtfU.setText("cloudera");
 
@@ -578,14 +576,13 @@ public class MorphMinerTool extends javax.swing.JFrame {
         jPanel12.add(jLabel8);
 
         jtfZK.setBackground(new java.awt.Color(255, 255, 204));
-        jtfZK.setText("training01.mtv.cloudera.com:2181");
+        jtfZK.setText("127.0.0.1:2181/solr");
         jtfZK.setPreferredSize(new java.awt.Dimension(292, 28));
         jPanel12.add(jtfZK);
 
         jLabel10.setText("Collection:");
         jPanel12.add(jLabel10);
 
-        jtfCollection.setText("FlumeProbes_01");
         jtfCollection.setPreferredSize(new java.awt.Dimension(217, 28));
         jtfCollection.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

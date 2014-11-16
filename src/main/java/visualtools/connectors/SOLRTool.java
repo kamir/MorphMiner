@@ -13,7 +13,7 @@ public class SOLRTool extends ClusterGateway {
 
     static String ZK = "127.0.0.1:2181/solr";
     static String SOLR = "127.0.0.1:8983/solr";
-    static String HOME = "/home/training";
+    static String HOME = "/home/cloudera";
 
     static int SHARDS = 1;    
     
@@ -28,11 +28,10 @@ public class SOLRTool extends ClusterGateway {
         // An SSH login to a GatewayNode is required.
         
         String collection = "FAQMails02";
+
+        SOLRTool.init( "127.0.0.1" , "cloudera" , "cloudera" );
         
-//        SOLRTool.init( "training01.mtv.cloudera.com" , "mirko.kaempf" , "MUvup3uT" );
-        SOLRTool.init( "172.16.14.185" , "cloudera" , "cloudera" );
-        SOLRTool.prepareCollection( "172.16.14.185:2181/solr", collection );
-        // SOLRTool.uploadAndPublish( collection );
+        SOLRTool.prepareCollection( "127.0.0.1:2181/solr", collection );
         
         SOLRTool.close();
         
@@ -41,12 +40,6 @@ public class SOLRTool extends ClusterGateway {
         System.exit( 0 );
         
     }    
-    
-    public static void prepareCollection(String coll) {
-        // SOLR configuration
-        ZK = "training01.mtv.cloudera.com:2181/solr";
-        prepareCollection(ZK, coll);   
-    }
 
     public static void prepareCollection(String zk, String coll) {
          
