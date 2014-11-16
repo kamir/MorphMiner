@@ -130,8 +130,8 @@ public class MorphMinerTool extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jtfCollection = new javax.swing.JTextField();
         jButton9 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
         jButton17 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
         flumeEditorPane = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
@@ -591,21 +591,13 @@ public class MorphMinerTool extends javax.swing.JFrame {
         });
         jPanel12.add(jtfCollection);
 
-        jButton9.setText("create SOLR config on cluster");
+        jButton9.setText("create instancedir on cluster");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
             }
         });
         jPanel12.add(jButton9);
-
-        jButton19.setText("publish new config to cluster");
-        jButton19.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton19ActionPerformed(evt);
-            }
-        });
-        jPanel12.add(jButton19);
 
         jButton17.setText("update config");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
@@ -614,6 +606,15 @@ public class MorphMinerTool extends javax.swing.JFrame {
             }
         });
         jPanel12.add(jButton17);
+
+        jButton19.setText("publish new config to cluster");
+        jButton19.setEnabled(false);
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+        jPanel12.add(jButton19);
 
         ttlEditorPane.add(jPanel12, java.awt.BorderLayout.PAGE_START);
 
