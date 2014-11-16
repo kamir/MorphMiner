@@ -3,7 +3,7 @@
     <groupId>de.bitocean</groupId>
     <artifactId>morphminer</artifactId>
     <packaging>jar</packaging>
-    <version>0.8.1-SNAPSHOT</version>
+    <version>0.8.2-SNAPSHOT</version>
     <name>MorphMiner</name>
     <url>http://semanpix.de/morphminer.org</url>
     <properties>
