@@ -6,4 +6,3 @@ mvn compile package
 cp target/morphminer-0.8.2-SNAPSHOT-jar-with-dependencies.jar bin/mm-latest.jar
 java -jar ./bin/mm-latest.jar;./lib/json-lib.jar;./lib/sshxcute-1.0.jar de.bitocean.mm.MorphMinerTool 
 cd bin
-
