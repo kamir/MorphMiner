@@ -515,7 +515,7 @@ public class MorphMinerTool extends javax.swing.JFrame {
 
         jPanel11.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
-        jButton3.setText("start with template");
+        jButton3.setText("replace editor content with template");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -871,7 +871,7 @@ public class MorphMinerTool extends javax.swing.JFrame {
 
             this.modelI.runFullMorphlineTest();
             
-            this.manageTabs.setSelectedIndex(2);
+            this.manageTabs.setSelectedIndex(3);
 
         } catch (Exception ex) {
             Logger.getLogger(MorphMinerTool.class.getName()).log(Level.SEVERE, null, ex);
@@ -1030,11 +1030,12 @@ public class MorphMinerTool extends javax.swing.JFrame {
             
             saveCurrentFiles();
             
-            // TODO add your handling code here:
-            manageTabs.setSelectedIndex(2);
+            manageTabs.setSelectedIndex(3);
             SOLRTool.init(this.jtfGW.getText(), this.jtfU.getText(), this.jtfPW.getText() );
             SOLRTool.uploadAndPublish( this.jtfCollection.getText() );
+
             // SOLRTool.flushDebugScript();
+            
             SOLRTool.closeDebugScript();
         } catch (IOException ex) {
             Logger.getLogger(MorphMinerTool.class.getName()).log(Level.SEVERE, null, ex);

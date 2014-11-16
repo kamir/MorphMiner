@@ -722,7 +722,7 @@
                               <SubComponents>
                                 <Component class="javax.swing.JButton" name="jButton3">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" value="start with template"/>
+                                    <Property name="text" type="java.lang.String" value="replace editor content with template"/>
                                   </Properties>
                                   <Events>
                                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
