@@ -112,7 +112,7 @@ public class SOLRTool extends ClusterGateway {
         String fnLocal = projectContext + "/conf/schema.xml";
         
         javax.swing.JOptionPane.showMessageDialog(
-                null, "Please copy: " + fnRemote + "\nto" + fnLocal);
+                null, "Please copy (remote): \n\t" + fnRemote + "\nto (local):\n\t" + fnLocal);
         
     }
 

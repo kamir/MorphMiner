@@ -147,6 +147,7 @@ public class MorphMinerTool extends javax.swing.JFrame {
         jaI = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("MorphMiner ");
 
         jPanel6.setLayout(new java.awt.BorderLayout());
 
@@ -592,6 +593,7 @@ public class MorphMinerTool extends javax.swing.JFrame {
         jPanel12.add(jtfCollection);
 
         jButton9.setText("create instancedir on cluster");
+        jButton9.setToolTipText("The instancedir and the collection are created on the cluster with a default configuration.");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -600,6 +602,7 @@ public class MorphMinerTool extends javax.swing.JFrame {
         jPanel12.add(jButton9);
 
         jButton17.setText("update config");
+        jButton17.setToolTipText("Local changes are published to cluster. This overwrites the configuration files on the gateway and in zookeeper. The collection will be reloaded by SOLR.");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton17ActionPerformed(evt);
