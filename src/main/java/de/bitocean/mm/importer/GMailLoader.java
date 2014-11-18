@@ -130,7 +130,7 @@ public class GMailLoader {
             document.addField("tag", m.getSubject());
 
             String cont = handleContent(document, m);
-            //document.addField("contextdescription", cont );
+
             document.addField("answer", cont );
             
             document.addField("question", m.getSubject() );
@@ -163,7 +163,7 @@ public class GMailLoader {
 
         UpdateRequest commit = new UpdateRequest();
         commit.setAction(UpdateRequest.ACTION.COMMIT, true, true);
-        commit.setParam("collection", "faq_collection1");
+        commit.setParam("collection", collection );
         commit.process(solr);
 
     }
