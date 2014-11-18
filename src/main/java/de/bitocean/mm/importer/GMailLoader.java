@@ -47,6 +47,8 @@ public class GMailLoader {
 
     static String zkHostString = null;
     static SolrServer solr = null;
+    
+    static String collection = "dafault";
 
     public static void init() throws Exception {
         // zkHostString = "training01.sjc.cloudera.com:2181,training03.sjc.cloudera.com:2181,training06.sjc.cloudera.com:2181/solr";
@@ -68,6 +70,8 @@ public class GMailLoader {
 
         String account = javax.swing.JOptionPane.showInputDialog("Username:", "mirko.kaempf@cloudera.com");
         String pwd = javax.swing.JOptionPane.showInputDialog("Password:", "");
+        
+        collection = javax.swing.JOptionPane.showInputDialog("Collection: ", "FAQMails02");
 
         for( String label : labels) {
         
@@ -152,7 +156,7 @@ public class GMailLoader {
 
             UpdateRequest add = new UpdateRequest();
             add.add(document);
-            add.setParam("collection", "faq_collection1");
+            add.setParam("collection", collection);
             add.process(solr);
 
         }
@@ -185,7 +189,8 @@ public class GMailLoader {
                     cont = cont + c + "\n\n\n" + "*** PART " + (i + 1) + " ***";
                 }
             }
-        } catch (Exception ex) {
+        } 
+        catch (Exception ex) {
 
         }
 
