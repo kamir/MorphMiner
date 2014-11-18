@@ -135,7 +135,7 @@ public class GMailLoader {
             
             document.addField("question", m.getSubject() );
 
-            document.addField("type", "raw");
+            document.addField("type", "raw.email");
             document.addField("context", label);
 
             String author = "MAILIMPORT";
@@ -143,7 +143,7 @@ public class GMailLoader {
             if (from != null) {
                 author = "";
                 for (Address a : from) {                    
-                    author = author.concat(" " + a.toString());
+                    author = author.concat(", " + a.toString());
                 }
             }
             document.addField("author", author);
