@@ -5,6 +5,10 @@
  */
 package de.bitocean.mm;
 
+import de.bitocean.mm.importer.EmailImport;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author kamir
@@ -40,6 +44,8 @@ public class MMApp extends javax.swing.JFrame {
         deleteMenuItem = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
         helpMenu = new javax.swing.JMenu();
         contentsMenuItem = new javax.swing.JMenuItem();
         aboutMenuItem = new javax.swing.JMenuItem();
@@ -107,6 +113,18 @@ public class MMApp extends javax.swing.JFrame {
 
         menuBar.add(jMenu1);
 
+        jMenu2.setText("Import data to index");
+
+        jMenuItem2.setText("import Email");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem2);
+
+        menuBar.add(jMenu2);
+
         helpMenu.setMnemonic('h');
         helpMenu.setText("Help");
 
@@ -144,6 +162,18 @@ public class MMApp extends javax.swing.JFrame {
         // TODO add your handling code here:
         MorphMinerTool.main(null);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    // import Emails
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        
+        try {
+            EmailImport.main(null);
+        } 
+        catch (Exception ex) {
+            Logger.getLogger(MMApp.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,7 +221,9 @@ public class MMApp extends javax.swing.JFrame {
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenu helpMenu;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem openMenuItem;
     private javax.swing.JMenuItem pasteMenuItem;
