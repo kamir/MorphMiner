@@ -136,7 +136,14 @@ public class MorphMinerTool extends javax.swing.JFrame {
         jPanel13 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jtfFlumeCFGFileName = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jtfAgent = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jtfFlumeGW = new javax.swing.JTextField();
         jButton18 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        jlPID = new javax.swing.JLabel();
+        jButton21 = new javax.swing.JButton();
         jPanel15 = new javax.swing.JPanel();
         jpImage3 = new javax.swing.JPanel();
         Morphes = new javax.swing.JPanel();
@@ -632,13 +639,27 @@ public class MorphMinerTool extends javax.swing.JFrame {
 
         jtfFlumeCFGFileName.setText(" ");
         jtfFlumeCFGFileName.setMinimumSize(new java.awt.Dimension(349, 28));
-        jtfFlumeCFGFileName.setPreferredSize(new java.awt.Dimension(848, 28));
+        jtfFlumeCFGFileName.setPreferredSize(new java.awt.Dimension(448, 28));
         jtfFlumeCFGFileName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfFlumeCFGFileNameActionPerformed(evt);
             }
         });
         jPanel13.add(jtfFlumeCFGFileName);
+
+        jLabel14.setText("agent:");
+        jPanel13.add(jLabel14);
+
+        jtfAgent.setMinimumSize(new java.awt.Dimension(84, 28));
+        jtfAgent.setPreferredSize(new java.awt.Dimension(84, 28));
+        jPanel13.add(jtfAgent);
+
+        jLabel16.setText("gateway:");
+        jPanel13.add(jLabel16);
+
+        jtfFlumeGW.setPreferredSize(new java.awt.Dimension(124, 28));
+        jtfFlumeGW.setSize(new java.awt.Dimension(124, 28));
+        jPanel13.add(jtfFlumeGW);
 
         jButton18.setText("start flume agent");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
@@ -647,6 +668,22 @@ public class MorphMinerTool extends javax.swing.JFrame {
             }
         });
         jPanel13.add(jButton18);
+
+        jLabel15.setText("PID:");
+        jPanel13.add(jLabel15);
+
+        jlPID.setText("...");
+        jlPID.setPreferredSize(new java.awt.Dimension(82, 16));
+        jlPID.setSize(new java.awt.Dimension(83, 16));
+        jPanel13.add(jlPID);
+
+        jButton21.setText("stop flume agent");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+        jPanel13.add(jButton21);
 
         flumeEditorPane.add(jPanel13, java.awt.BorderLayout.NORTH);
 
@@ -1046,17 +1083,27 @@ public class MorphMinerTool extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfFlumeCFGFileNameActionPerformed
 
+    
+    // starte den Flume agent ...
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         try {
             // TODO add your handling code here:
             FlumeTool.init(this.jtfGW.getText(), this.jtfU.getText(), this.jtfPW.getText() );
             
-            String agent = "agent1";
+            String agent = this.jtfAgent.getText();
+            
             String localCFG = "/Users/kamir/etosha/p1/flume.conf";
             String remoteCFG = "/home/etosha/p1/flume.conf";
             
+            System.out.println( ">>> use real paths !!! " );
+            
             FlumeTool.updateConfiguration(localCFG, remoteCFG);
             FlumeTool.runAgentWithConfiguration(remoteCFG, agent);
+            
+            System.out.println( ">>> find PID on Gateway ... " );
+            String pid = "123";
+            this.jlPID.setText(pid);
+            
         } catch (IOException ex) {
             Logger.getLogger(MorphMinerTool.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1066,6 +1113,14 @@ public class MorphMinerTool extends javax.swing.JFrame {
     private void jtfPWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPWActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfPWActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+       String PID = this.jlPID.getText();
+       String agent = this.jtfAgent.getText();
+       String gw = jtfFlumeGW.getText();
+       
+       FlumeTool.killAgent( agent, gw, PID );
+    }//GEN-LAST:event_jButton21ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1128,6 +1183,7 @@ public class MorphMinerTool extends javax.swing.JFrame {
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -1140,6 +1196,9 @@ public class MorphMinerTool extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1174,14 +1233,17 @@ public class MorphMinerTool extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextArea jaI;
     private javax.swing.JTextArea jaL;
+    private javax.swing.JLabel jlPID;
     private javax.swing.JPanel jpImage2;
     private javax.swing.JPanel jpImage3;
     private javax.swing.JRadioButton jrbLoadFile;
     private javax.swing.JRadioButton jrbLoadLines;
     private javax.swing.JTextField jtEBF;
     private javax.swing.JTextField jtEIF;
+    private javax.swing.JTextField jtfAgent;
     private javax.swing.JTextField jtfCollection;
     private javax.swing.JTextField jtfFlumeCFGFileName;
+    private javax.swing.JTextField jtfFlumeGW;
     private javax.swing.JTextField jtfGW;
     private javax.swing.JTextField jtfPW;
     private javax.swing.JTextField jtfU;

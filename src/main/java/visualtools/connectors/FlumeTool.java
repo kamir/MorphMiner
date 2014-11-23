@@ -47,6 +47,10 @@ public class FlumeTool extends ClusterGateway {
     
     }
 
+    public static void killAgent(String agent, String gw, String PID) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
    
   
