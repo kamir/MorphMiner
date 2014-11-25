@@ -1,6 +1,6 @@
 MorphMiner
 ==========
 
-MorphMiner is in its core a Morphline development tool. But it can also be seen as a data collection tool for scientists.It allows data ingestion into Hadoop clusters.
+MorphMiner is in its core a morphline development tool. But it can also be seen as a data collection tool for scientists. It supports the prozess of building data ingestion pipelines for Hadoop clusters.
 
-The Github-Wiki shows how to do a testdrive.
+The Github-Wiki (https://github.com/kamir/MorphMiner/wiki) shows how to do a testdrive ...
