@@ -50,8 +50,9 @@ public class MLPModelWrapper {
 
     void store() throws IOException {
 //        store(basesFolder, editorMorphline.getText());
-        store.saveMorphline(basesFolder, editorMorphline.getText());
-        store.saveSchema(basesFolder, _editorSOLRSchema.getText());
+        store.saveMorphline( basesFolder, editorMorphline.getText());
+        store.saveSchema( basesFolder, _editorSOLRSchema.getText());
+        store.saveFlumeCFG( basesFolder, _editorFlumeCFG.getText());
     }
 
     void load() throws IOException {

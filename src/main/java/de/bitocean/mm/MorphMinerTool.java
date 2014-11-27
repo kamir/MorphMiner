@@ -136,6 +136,7 @@ public class MorphMinerTool extends javax.swing.JFrame {
         jPanel13 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jtfFlumeCFGFileName = new javax.swing.JTextField();
+        jButton22 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         jtfAgent = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
@@ -647,6 +648,14 @@ public class MorphMinerTool extends javax.swing.JFrame {
         });
         jPanel13.add(jtfFlumeCFGFileName);
 
+        jButton22.setText("show graph");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
+        jPanel13.add(jButton22);
+
         jLabel14.setText("agent:");
         jPanel13.add(jLabel14);
 
@@ -1122,6 +1131,23 @@ public class MorphMinerTool extends javax.swing.JFrame {
        FlumeTool.killAgent( agent, gw, PID );
     }//GEN-LAST:event_jButton21ActionPerformed
 
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        try {
+            
+            saveCurrentFiles();
+            
+            File f = modelI.store.getFlumeCFGFilename( jtEIF.getText() );
+            
+            System.out.println("Show Flume-Configuration file: " + f.getAbsolutePath() );
+            FlumeCFGModel fp3 = new FlumeCFGModel( f );
+            fp3.show( f.getAbsolutePath() );
+        
+        } 
+        catch (IOException ex) {
+            Logger.getLogger(MorphMinerTool.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton22ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1184,6 +1210,7 @@ public class MorphMinerTool extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;

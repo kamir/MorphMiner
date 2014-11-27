@@ -92,5 +92,11 @@ public class LocalMorphlineStore {
     public File getFlumeCFGFilename(String path) {
         return new File( folder + "/" + path + "/flume.conf");
     }
+
+    void saveFlumeCFG(String path, String text) throws FileNotFoundException, IOException {
+        FileWriter fw = new FileWriter( getFlumeCFGFilename( path ) );
+        fw.write(text);
+        fw.close();
+    }
     
 }
