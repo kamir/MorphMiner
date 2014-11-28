@@ -290,6 +290,7 @@ public class TreeViewer extends JApplet {
 
         content.add( this );
         frame.pack();
+        frame.setSize( 800,800);
         frame.setVisible(true);
     }
 }
