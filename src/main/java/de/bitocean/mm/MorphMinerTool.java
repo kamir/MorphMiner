@@ -5,11 +5,15 @@
  */
 package de.bitocean.mm;
 
+import de.bitocean.mm.sniplibtool.SnipLibConnector;
+import de.bitocean.mm.sniplibtool.Snippet;
+import de.bitocean.mm.sniplibtool.SnippetConsumer;
 import visualtools.connectors.CMConnectorImpl;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -39,7 +43,8 @@ import visualtools.connectors.SOLRTool;
  *
  * @author kamir
  */
-public class MorphMinerTool extends javax.swing.JFrame {
+public class MorphMinerTool extends javax.swing.JFrame
+    implements SnippetConsumer {
 
     CMConnectorImpl cmcon = new CMConnectorImpl();
     
@@ -81,6 +86,8 @@ public class MorphMinerTool extends javax.swing.JFrame {
         jButton12 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jPanel17 = new javax.swing.JPanel();
+        jButton23 = new javax.swing.JButton();
         jPanel16 = new javax.swing.JPanel();
         jtfGW = new javax.swing.JTextField();
         jtfU = new javax.swing.JTextField();
@@ -223,6 +230,32 @@ public class MorphMinerTool extends javax.swing.JFrame {
             }
         });
 
+        jPanel17.setBorder(javax.swing.BorderFactory.createTitledBorder("Snip Lib Tool"));
+
+        jButton23.setText("select snippet");
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton23)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton23)
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout projectLocationLayout = new javax.swing.GroupLayout(projectLocation);
         projectLocation.setLayout(projectLocationLayout);
         projectLocationLayout.setHorizontalGroup(
@@ -234,6 +267,7 @@ public class MorphMinerTool extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addGroup(projectLocationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(projectLocationLayout.createSequentialGroup()
                         .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -266,7 +300,9 @@ public class MorphMinerTool extends javax.swing.JFrame {
                     .addComponent(jButton6)
                     .addComponent(jButton4)
                     .addComponent(jButton13))
-                .addContainerGap(257, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(146, Short.MAX_VALUE))
         );
 
         manageTabs.addTab("Project", projectLocation);
@@ -334,7 +370,7 @@ public class MorphMinerTool extends javax.swing.JFrame {
                             .addComponent(jLabel12))))
                 .addGap(12, 12, 12)
                 .addComponent(jButton20)
-                .addGap(0, 248, Short.MAX_VALUE))
+                .addGap(0, 272, Short.MAX_VALUE))
         );
 
         manageTabs.addTab("Cluster Gateway", jPanel16);
@@ -386,7 +422,7 @@ public class MorphMinerTool extends javax.swing.JFrame {
                 .addGroup(dataflowDescriptorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 291, Short.MAX_VALUE))
+                .addGap(0, 315, Short.MAX_VALUE))
         );
 
         manageTabs.addTab("Data Flow", dataflowDescriptors);
@@ -1148,6 +1184,18 @@ public class MorphMinerTool extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton22ActionPerformed
 
+    Snippet currentSnippet = null;
+    
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+        // Select a snippet vie SnipLibCOnnector
+        
+        SnipLibConnector slc = SnipLibConnector.getSnipLibConnector();
+        slc.show( "Select a Snippet ..." , this);
+        
+        // callback via SnippetConsumer.setSelectedSnippet ....
+       
+    }//GEN-LAST:event_jButton23ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1211,6 +1259,7 @@ public class MorphMinerTool extends javax.swing.JFrame {
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -1242,6 +1291,7 @@ public class MorphMinerTool extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1358,6 +1408,25 @@ public class MorphMinerTool extends javax.swing.JFrame {
         catch (IOException ex) {
             Logger.getLogger(MorphMinerTool.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+    }
+
+    public void setSelectedSnippet(Snippet s) {
+
+        // place snippet in "Zwischenablage" ...
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(
+               new StringSelection( s.snip ) , null
+        );
+        
+        
+        this.currentSnippet = s;
+        
+        String snip = currentSnippet.snip;
+        String src = currentSnippet.src;
+                
+        System.out.println( "> Selected the snippet " + snip + " from " + "{" + src + "}");
+        
+        System.out.println( "> Snippet is now in BUFFER ... use [CTRL+V]" );
         
     }
 
