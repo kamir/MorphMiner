@@ -1,21 +1,39 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package de.bitocean.mm.sniplibtool;
 
+import de.bitocean.mm.MMAppRunner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
+import org.apache.hadoop.conf.Configuration;
+import org.etosha.core.sc.connector.SemanticContextBridge;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
 /**
- *
  * @author kamir
  */
 public class BackgroundKnowledgeFrame extends javax.swing.JFrame {
-
+ 
+    String topic = "Flume";
+    String snippetsListUrl1 = "http://semanpix.de/opendata/wiki/index.php?title=Special:Ask/-5B-5BCategory:Snippet-5D-5D-20-5B-5BCategory:";
+    String snippetsListUrl2 = "-5D-5D/-3FSnippetCodePage%3DSnippet/-3FDocumentationLink%3DOriginal-20Dokumentation/-3FUsed%3DUsed-20n-20times/format%3Djson/offset%3D0";
+    
     /**
      * Creates new form BackgroundKnowledgeFrame
      */
-    public BackgroundKnowledgeFrame() {
-        initComponents();
+    public BackgroundKnowledgeFrame() throws IOException {
+        
+            initComponents();
+     
     }
 
     /**
@@ -27,49 +45,67 @@ public class BackgroundKnowledgeFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jpCenter = new javax.swing.JPanel();
-        jpTop = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
-        jpBottom = new javax.swing.JPanel();
+        jToggleButton3 = new javax.swing.JToggleButton();
+        jToggleButton1 = new javax.swing.JToggleButton();
+        jToggleButton2 = new javax.swing.JToggleButton();
+        jToggleButton4 = new javax.swing.JToggleButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
+        jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jpTop = new javax.swing.JPanel();
+        jpBottom = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        javax.swing.GroupLayout jpCenterLayout = new javax.swing.GroupLayout(jpCenter);
-        jpCenter.setLayout(jpCenterLayout);
-        jpCenterLayout.setHorizontalGroup(
-            jpCenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 599, Short.MAX_VALUE)
-        );
-        jpCenterLayout.setVerticalGroup(
-            jpCenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 138, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jpCenter, java.awt.BorderLayout.CENTER);
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Morphline", "Flume Configuration", "Avro Schema", "SOLR Schema" }));
-        jComboBox1.setPreferredSize(new java.awt.Dimension(780, 27));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-        jpTop.add(jComboBox1);
-
-        jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
         jList1.setPreferredSize(new java.awt.Dimension(780, 85));
         jScrollPane1.setViewportView(jList1);
 
-        jpTop.add(jScrollPane1);
+        buttonGroup1.add(jToggleButton3);
+        jToggleButton3.setText("Flume");
+        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton3ActionPerformed(evt);
+            }
+        });
 
-        getContentPane().add(jpTop, java.awt.BorderLayout.PAGE_START);
+        jToggleButton1.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(jToggleButton1);
+        jToggleButton1.setText("Avro");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(jToggleButton2);
+        jToggleButton2.setText("SOLR");
+        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton2ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(jToggleButton4);
+        jToggleButton4.setText("Morphline");
+        jToggleButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton4ActionPerformed(evt);
+            }
+        });
+
+        jScrollPane2.setViewportView(jTextPane1);
+
+        jButton2.setText("Refresh");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Select Snippet ...");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -78,21 +114,70 @@ public class BackgroundKnowledgeFrame extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout jpCenterLayout = new javax.swing.GroupLayout(jpCenter);
+        jpCenter.setLayout(jpCenterLayout);
+        jpCenterLayout.setHorizontalGroup(
+            jpCenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpCenterLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jpCenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1)
+                    .addGroup(jpCenterLayout.createSequentialGroup()
+                        .addComponent(jToggleButton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jToggleButton4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jToggleButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jToggleButton1)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jpCenterLayout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addGroup(jpCenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jpCenterLayout.createSequentialGroup()
+                                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                                .addGap(17, 17, 17))
+                            .addGroup(jpCenterLayout.createSequentialGroup()
+                                .addComponent(jButton1)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addContainerGap())
+        );
+        jpCenterLayout.setVerticalGroup(
+            jpCenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpCenterLayout.createSequentialGroup()
+                .addGroup(jpCenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jToggleButton1)
+                    .addComponent(jToggleButton2)
+                    .addComponent(jToggleButton3)
+                    .addComponent(jToggleButton4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jpCenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2)
+                    .addGroup(jpCenterLayout.createSequentialGroup()
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1)
+                        .addGap(0, 58, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+
+        getContentPane().add(jpCenter, java.awt.BorderLayout.CENTER);
+
+        jpTop.setLayout(new java.awt.BorderLayout());
+        getContentPane().add(jpTop, java.awt.BorderLayout.PAGE_START);
+
         javax.swing.GroupLayout jpBottomLayout = new javax.swing.GroupLayout(jpBottom);
         jpBottom.setLayout(jpBottomLayout);
         jpBottomLayout.setHorizontalGroup(
             jpBottomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBottomLayout.createSequentialGroup()
-                .addContainerGap(445, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
+            .addGap(0, 649, Short.MAX_VALUE)
         );
         jpBottomLayout.setVerticalGroup(
             jpBottomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBottomLayout.createSequentialGroup()
-                .addContainerGap(57, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(14, 14, 14))
+            .addGap(0, 100, Short.MAX_VALUE)
         );
 
         getContentPane().add(jpBottom, java.awt.BorderLayout.PAGE_END);
@@ -100,15 +185,45 @@ public class BackgroundKnowledgeFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        con.sc.setSelectedSnippet( initSelectedSnippet() );
-        this.dispose();
+                 con.sc.setSelectedSnippet( initSelectedSnippet() );
+                 this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        try {
+            
+            this.initSnippets();
+            initSelectedSnippet();
+        
+        } catch (IOException ex) {
+            Logger.getLogger(BackgroundKnowledgeFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+        this.topic = "Flume";
+                jButton2ActionPerformed(null);
+
+    }//GEN-LAST:event_jToggleButton3ActionPerformed
+
+    private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton4ActionPerformed
+        this.topic = "Morphline";
+                jButton2ActionPerformed(null);
+
+ 
+    }//GEN-LAST:event_jToggleButton4ActionPerformed
+
+    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+        this.topic = "SOLR";
+                jButton2ActionPerformed(null);
+
+    }//GEN-LAST:event_jToggleButton2ActionPerformed
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        this.topic = "AVRO";
+        jButton2ActionPerformed(null);
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     SnipLibConnector con = null;
     
@@ -116,6 +231,7 @@ public class BackgroundKnowledgeFrame extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -142,29 +258,112 @@ public class BackgroundKnowledgeFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BackgroundKnowledgeFrame().setVisible(true);
+                try {
+                    new BackgroundKnowledgeFrame().setVisible(true);
+                } 
+                catch (IOException ex) {
+                    Logger.getLogger(BackgroundKnowledgeFrame.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JList jList1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JToggleButton jToggleButton3;
+    private javax.swing.JToggleButton jToggleButton4;
     private javax.swing.JPanel jpBottom;
     private javax.swing.JPanel jpCenter;
     private javax.swing.JPanel jpTop;
     // End of variables declaration//GEN-END:variables
 
     private Snippet initSelectedSnippet() {
-
-        Snippet s = new Snippet();
-        s.src = "FRAME";
-        s.snip = "ABC";
-        s.doc = "Test ... ";
+        Snippet s = (Snippet)jList1.getSelectedValue();
         
+        this.jTextPane1.setText( s.snip );
         return s;
-    
+    }
+
+    private void initSnippets() throws IOException {
+        
+        DefaultListModel dlm = new DefaultListModel();
+        dlm.clear();
+        this.repaint();
+
+        URL listOfSnippets = new URL( getSnippetListURL() );
+            
+        Vector<Snippet> slist = new Vector<Snippet>();
+        
+        URLConnection yc = listOfSnippets.openConnection();
+        BufferedReader in = new BufferedReader(new InputStreamReader(
+                                yc.getInputStream()));
+
+        StringBuffer sb = new StringBuffer();
+        
+        String inputLine;
+        while ((inputLine = in.readLine()) != null) { 
+            System.out.println(inputLine);
+            sb.append( inputLine );
+        }    
+        in.close();
+        
+        System.out.println("=======decode=======");
+
+        Object obj=JSONValue.parse(sb.toString());
+
+        JSONObject o = (JSONObject)obj;
+        System.out.println("======the 2nd element of array======");
+        
+        JSONObject o2 = (JSONObject)o.get("results");
+        System.out.println( o2.size() );
+        
+        Set s = o2.keySet();
+        
+
+        
+        
+        
+        
+        
+        
+        Iterator i = s.iterator();
+        while( i.hasNext() ) {
+            
+            String k = (String)i.next();
+            System.out.println( k );
+            
+            JSONObject o3 = (JSONObject)o2.get( k );
+            JSONObject o4 = (JSONObject)o3.get( "printouts" );
+
+            System.out.println( o4 );
+            
+            Snippet sn = Snippet.createSnipet( k , o4 , MMAppRunner.scb );
+
+            slist.add(sn);
+            
+        }
+        System.out.println( slist.size() + " snippets found.");
+        initSnipetTable( slist );
+        
+    }
+
+    private void initSnipetTable(Vector<Snippet> slist) {
+        DefaultListModel dlm = new DefaultListModel();
+        for( Snippet s : slist )
+           dlm.addElement( s );
+        this.jList1.setModel(dlm);
+        this.repaint();
+    }
+
+    private String getSnippetListURL() {
+        return this.snippetsListUrl1 + this.topic + this.snippetsListUrl2;
     }
 }

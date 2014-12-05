@@ -5,6 +5,9 @@
 package de.bitocean.mm.sniplibtool;
 
 import java.awt.Container;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 
 /**
@@ -17,8 +20,6 @@ public class SnipLibConnector {
     BackgroundKnowledgeFrame frame = null;
     static SnipLibConnector con;
     
-    
-    
     private SnipLibConnector () {};
     
     public static SnipLibConnector getSnipLibConnector() {
@@ -30,7 +31,12 @@ public class SnipLibConnector {
     }
     
     public void init(){
-        frame = new BackgroundKnowledgeFrame();
+        try {
+            frame = new BackgroundKnowledgeFrame();
+        } 
+        catch (IOException ex) {
+            Logger.getLogger(SnipLibConnector.class.getName()).log(Level.SEVERE, null, ex);
+        }
         frame.con = this;
     }
     
@@ -40,6 +46,7 @@ public class SnipLibConnector {
     
     public void show(String title, SnippetConsumer sC) {
         
+        System.out.println( "> open the snippet selector ...");
         sc = sC;
 
         frame.setTitle(title);
