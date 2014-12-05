@@ -98,6 +98,7 @@ public class BackgroundKnowledgeFrame extends javax.swing.JFrame {
             }
         });
 
+        jTextPane1.setBackground(new java.awt.Color(204, 255, 204));
         jScrollPane2.setViewportView(jTextPane1);
 
         jButton2.setText("Refresh");
@@ -135,12 +136,8 @@ public class BackgroundKnowledgeFrame extends javax.swing.JFrame {
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
                         .addGroup(jpCenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jpCenterLayout.createSequentialGroup()
-                                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
-                                .addGap(17, 17, 17))
-                            .addGroup(jpCenterLayout.createSequentialGroup()
-                                .addComponent(jButton1)
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jpCenterLayout.setVerticalGroup(

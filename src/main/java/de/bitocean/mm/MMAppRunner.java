@@ -10,6 +10,7 @@ import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
+import org.etosha.cmd.EtoshaContextLogger;
 import org.etosha.core.sc.connector.SemanticContextBridge;
 
 /**
@@ -25,7 +26,8 @@ public class MMAppRunner extends Configured implements Tool {
         
         Configuration cfg = new Configuration();
 
-        File cfgFile = new File("/Users/kamir/etc/smw-site.xml");
+        File cfgFile = EtoshaContextLogger.getCFGFile();
+        
         System.out.println( ">>> CFG:   " + cfgFile.getAbsolutePath() );
         System.out.println( ">>> exists : " + cfgFile.exists() );
 
