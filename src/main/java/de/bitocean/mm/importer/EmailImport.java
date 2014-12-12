@@ -24,6 +24,8 @@ public class EmailImport {
         
         GMailLoader.importEmailsForLabels( topics );
         
+        javax.swing.JOptionPane.showMessageDialog( null, "Import finished." );
+        
     }
     
 }

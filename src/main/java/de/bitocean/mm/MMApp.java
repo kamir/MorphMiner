@@ -6,8 +6,14 @@
 package de.bitocean.mm;
 
 import de.bitocean.mm.importer.EmailImport;
+import java.io.File;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.util.Tool;
+import org.apache.hadoop.util.ToolRunner;
+import org.etosha.cmd.statistics.DataSetInspector;
 
 /**
  *
@@ -178,7 +184,7 @@ public class MMApp extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public int run(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -208,6 +214,7 @@ public class MMApp extends javax.swing.JFrame {
                 new MMApp().setVisible(true);
             }
         });
+        return 0;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -230,5 +237,9 @@ public class MMApp extends javax.swing.JFrame {
     private javax.swing.JMenuItem saveAsMenuItem;
     private javax.swing.JMenuItem saveMenuItem;
     // End of variables declaration//GEN-END:variables
+
+    
+    
+    
 
 }
