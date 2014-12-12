@@ -107,16 +107,40 @@
    -->
         
    <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false" /> 
-   <field name="tag" type="string" indexed="true" stored="true" multiValued="true"/>
-   <field name="timeasked" type="date" indexed="true" stored="true" />
 
-   <field name="question" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" />
-   <field name="answer" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" />
+   <field name="access_activity_s" type="tdouble" indexed="true" stored="true" multiValued="false" /> 
+   <field name="access_activity_t" type="tdouble" indexed="true" stored="true" multiValued="false" /> 
+   <field name="counter" type="tdouble" indexed="true" stored="true" multiValued="false" /> 
+   <field name="studyID" type="string" indexed="true" stored="true" multiValued="false" /> 
+   <field name="groupKEY" type="string" indexed="true" stored="true" multiValued="false" /> 
+    
+   <field name="np_target" type="string" indexed="true" stored="true" multiValued="false" /> 
+   <field name="np_source" type="string" indexed="true" stored="true" multiValued="false" /> 
+   <field name="np_typ" type="string" indexed="true" stored="true" multiValued="false" /> 
+   <field name="np_linkid" type="tint" indexed="true" stored="true" multiValued="false" /> 
 
-   <field name="type" type="string" indexed="true" stored="true"/>
-   <field name="author"  type="text_general" indexed="true" stored="true"/>
-   <field name="context" type="string" indexed="true" stored="true" />
-   
+   <field name="cc_linkA" type="tdouble" indexed="true" stored="true" multiValued="false" /> 
+   <field name="cc_linkB" type="tdouble" indexed="true" stored="true" multiValued="false" /> 
+   <field name="cc_linkC" type="tdouble" indexed="true" stored="true" multiValued="false" /> 
+
+   <field name="mi_p" type="tdouble" indexed="true" stored="true" multiValued="false" /> 
+   <field name="mi_info" type="tdouble" indexed="true" stored="true" multiValued="false" /> 
+   <field name="mi_h1" type="tdouble" indexed="true" stored="true" multiValued="false" /> 
+   <field name="mi_h2" type="tdouble" indexed="true" stored="true" multiValued="false" /> 
+ 
+   <field name="mi_std" type="tdouble" indexed="true" stored="true" multiValued="false" /> 
+   <field name="mi_mean" type="tdouble" indexed="true" stored="true" multiValued="false" /> 
+   <field name="mi_tscore" type="tdouble" indexed="true" stored="true" multiValued="false" /> 
+
+   <!-- Common metadata fields, named specifically to match up with
+     SolrCell metadata when parsing rich documents such as Word, PDF.
+     Some fields are multiValued only because Tika currently may return
+     multiple values for them. Some metadata is parsed from the documents,
+     but there are some which come from the client context:
+       "content_type": From the HTTP headers of incoming stream
+       "resourcename": From SolrCell request param resource.name
+   -->
+
    <field name="_version_" type="long" indexed="true" stored="true"/>
 
    <!--
@@ -207,7 +231,8 @@
         is added to the index.  It's used either to index the same field differently,
         or to add multiple fields to the same field for easier/faster searching.  -->
 
-   
+ 
+ 
   <types>
     <!-- field type definitions. The "name" attribute is
        just a label to be used by field definitions.  The "class"
@@ -536,7 +561,8 @@
       </analyzer>
     </fieldType>
     
-   
+    
+
     <fieldtype name="payloads" stored="false" indexed="true" class="solr.TextField" >
       <analyzer>
         <tokenizer class="solr.WhitespaceTokenizerFactory"/>
@@ -633,6 +659,13 @@
    <!-- some examples for different languages (generally ordered by ISO code) -->
 
     
+   
+    
+    
+
+     
+    
+   
  </types>
   
   <!-- Similarity is the scoring routine for each document vs. a query.
