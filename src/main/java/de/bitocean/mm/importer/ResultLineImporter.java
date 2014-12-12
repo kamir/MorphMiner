@@ -9,9 +9,11 @@ import java.io.UnsupportedEncodingException;
 import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
@@ -35,6 +37,10 @@ public class ResultLineImporter {
         String p = "/Volumes/MyExternalDrive/CALCULATIONS/CC/CN_1_en___Econophysics_BIN=24_dissertation_DEMO_2011_merged";
         String fn = "FINAL.CC.INFOFLOW.false.10-001.0.en___Econophysics_BIN=24.json";
         File f = new File(p+"/"+fn);
+        
+        javax.swing.JFileChooser jfc = new javax.swing.JFileChooser();
+        int returnVal = jfc.showOpenDialog( new JFrame() );
+        f = jfc.getSelectedFile();
         
         int i = 0;
         BufferedReader br = new BufferedReader( new FileReader( f ) );
@@ -133,11 +139,16 @@ public class ResultLineImporter {
             String IP = "172.16.14.225";
             String collection = "tscorrelationCollection_shard1_replica1";
 
+            String URL = "http://" + IP + ":8983/solr/" + collection + "/update/json?wt=json&commit=true";
+            
             DefaultHttpClient httpClient = new DefaultHttpClient();
-            HttpPost post = new HttpPost("http://" + IP + ":8983/solr/" + collection + "/update/json?wt=json&commit=true");
+            HttpPost post = new HttpPost( URL );
             
-            StringEntity entity  = new StringEntity("{\"add\": { \"doc\": " + line +"}}", "UTF-8");
+            // StringEntity entity  = new StringEntity("{\"add\": { \"doc\": " + line + "}}", "UTF-8");
+            StringEntity entity  = new StringEntity( line, "UTF-8");
             
+            System.out.println( URL );
+
             entity.setContentType("application/json");
  
             post.setEntity(entity);                
