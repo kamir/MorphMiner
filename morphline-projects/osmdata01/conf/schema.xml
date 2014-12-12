@@ -114,6 +114,7 @@
    <field name="user" type="string" indexed="true" stored="true"/>
    <field name="lat"  type="float" indexed="true" stored="true"/>
    <field name="lon" type="float" indexed="true" stored="true" />
+   <field name="memo" type="text_general" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" />
 
    <!-- Common metadata fields, named specifically to match up with
      SolrCell metadata when parsing rich documents such as Word, PDF.
