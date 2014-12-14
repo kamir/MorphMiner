@@ -7,7 +7,7 @@
     <name>MorphMiner</name>
     <url>http://semanpix.de/morphminer.org</url>
     <properties>
-        <hadoopclient.version>2.0.0-cdh4.5.0</hadoopclient.version>
+        <hadoopclient.version>2.5.0-cdh5.2.0</hadoopclient.version>
         <!--hadoopclient.version>2.2.0-cdh5.0.0-beta-2</hadoopclient.version-->
         <sesame.version>2.7.1</sesame.version>
         <httpclient.version>3.1</httpclient.version>

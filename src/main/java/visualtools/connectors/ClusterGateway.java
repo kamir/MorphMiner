@@ -40,9 +40,9 @@ public class ClusterGateway {
     
     SSHExec ssh = null;
     
-    String host = null;
-    String user = null;
-    String pass = null;
+    private String host = null;
+    private String user = null;
+    private String pass = null;
     
     ClusterGateway(){
     
@@ -62,11 +62,22 @@ public class ClusterGateway {
     public static void init(String h, String u, String p) throws IOException {
          //if ( tool == null )
          tool = new ClusterGateway( h , u , p );
+         
+         String SOLRHost = h + ":8983/solr";
+         SOLRTool.SOLR = SOLRHost;
+         
+         System.out.println( "\n### ClusterGateway : " + u + "@" + h );
+         System.out.println(   "### SOLRHost       : " + SOLRTool.SOLR );
+         System.out.println(   "### Zookeeper      : " + SOLRTool.ZK + "\n" );
+         
          initDebugScripter();
     }
     
     public static void initDebugScripter() throws IOException {
-        File f = File.createTempFile("debug_solrctl_script_", ".sh", new File(".") );
+        File f = File.createTempFile("debug_solrctl_script_", ".sh", new File("./tmp") );
+        
+        System.out.println(   "Debug script: " + f.getAbsolutePath() + "\n" );
+         
         bw = new BufferedWriter( new FileWriter( f ) );
     }
     
@@ -89,6 +100,8 @@ public class ClusterGateway {
         try {
             // https://code.google.com/p/sshxcute/
 
+            System.out.println("\n[CMD]: " + cmd + "\n");
+            
             CustomTask ct1 = new ExecCommand( cmd );
             ssh.exec(ct1);
                     

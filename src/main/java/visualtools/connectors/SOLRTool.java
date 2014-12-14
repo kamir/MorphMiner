@@ -2,6 +2,7 @@ package visualtools.connectors;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -11,8 +12,10 @@ import java.util.logging.Logger;
  */
 public class SOLRTool extends ClusterGateway {
 
-    static String ZK = "127.0.0.1:2181/solr";
+    static String ZK = "172.16.14.228:2181/solr";
+    
     static String SOLR = "127.0.0.1:8983/solr";
+    
     static String HOME = "/home/cloudera";
 
     static int SHARDS = 1;    
@@ -40,6 +43,27 @@ public class SOLRTool extends ClusterGateway {
         System.exit( 0 );
         
     }    
+
+    public static void listCollection() {
+         
+        String cmd1 = "solrctl --solr " + SOLR + " --zk " + ZK + " instancedir --list";
+
+        if ( bw != null ) {
+            try {
+                bw.write(cmd1 + "\n");
+            } 
+            catch (IOException ex) {
+                Logger.getLogger(SOLRTool.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
+        tool.open();
+        
+        tool.executeRemoteCommand( cmd1 );
+       
+        tool.close();
+       
+    }
 
     public static void prepareCollection(String zk, String coll) {
          
@@ -115,9 +139,13 @@ public class SOLRTool extends ClusterGateway {
                 null, "Please copy (remote): \n\t" + fnRemote + "\nto (local):\n\t" + fnLocal);
         
     }
-
+    
     public static void setProjectContext(File selectedFile) {
         projectContext = selectedFile.getAbsolutePath();
+        
+  
+
+        
     }
 
     public static void flushDebugScript() throws IOException {

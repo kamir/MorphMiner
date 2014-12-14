@@ -17,6 +17,7 @@ import java.awt.datatransfer.StringSelection;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -24,6 +25,7 @@ import java.io.PrintStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.Path;
+import java.util.Properties;
 
 import java.util.Vector;
 import java.util.logging.Level;
@@ -38,6 +40,7 @@ import org.fife.ui.rtextarea.RTextScrollPane;
 import visualtools.connectors.ClusterGateway;
 import visualtools.connectors.FlumeTool;
 import visualtools.connectors.SOLRTool;
+import static visualtools.connectors.SOLRTool.projectContext;
 
 /**
  *
@@ -136,6 +139,7 @@ public class MorphMinerTool extends javax.swing.JFrame
         jPanel12 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jtfZK = new javax.swing.JTextField();
+        jButton24 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jtfCollection = new javax.swing.JTextField();
         jButton9 = new javax.swing.JButton();
@@ -637,6 +641,14 @@ public class MorphMinerTool extends javax.swing.JFrame
         jtfZK.setPreferredSize(new java.awt.Dimension(292, 28));
         jPanel12.add(jtfZK);
 
+        jButton24.setText("list instancedir");
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton24ActionPerformed(evt);
+            }
+        });
+        jPanel12.add(jButton24);
+
         jLabel10.setText("Collection:");
         jPanel12.add(jLabel10);
 
@@ -817,18 +829,56 @@ public class MorphMinerTool extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_jtEIFActionPerformed
 
+    
+    Properties props = new Properties();
+                
+    
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-        JFileChooser jfc = new JFileChooser();
-        jfc.setCurrentDirectory(new File(this.jtEBF.getText()));
-        jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        jfc.showOpenDialog(this);
+        FileReader reader = null;
+        try {
+            // TODO add your handling code here:
+            JFileChooser jfc = new JFileChooser();
+            jfc.setCurrentDirectory(new File(this.jtEBF.getText()));
+            jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+            jfc.showOpenDialog(this);
+            String n = jfc.getSelectedFile().getName();
+            selectFolderByName( n );
+            jtfCollection.setText( n );
+            
+            SOLRTool.setProjectContext( jfc.getSelectedFile() );
+            
+            File f = new File( projectContext + "/pc.properties" );
+            reader = new FileReader( f );
+            props.load( reader );
+            
+            try{
+                jtfGW.setText( props.getProperty( "gateway" ) );
+            }
+            catch( Exception ex ){
+                
+            }
+            
+            try{
+               jtfU.setText( props.getProperty( "user" ) );
+            }
+            catch( Exception ex ){
+                
+            }
 
-        String n = jfc.getSelectedFile().getName();
-        selectFolderByName( n );
-        jtfCollection.setText( n );
+            
+        } 
+        catch (FileNotFoundException ex) {
+            Logger.getLogger(MorphMinerTool.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(MorphMinerTool.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                reader.close();
+            } catch (IOException ex) {
+                Logger.getLogger(MorphMinerTool.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
 
-        SOLRTool.setProjectContext( jfc.getSelectedFile() );
         
     }
 
@@ -1095,14 +1145,27 @@ public class MorphMinerTool extends javax.swing.JFrame
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
         
-        String h = jtfGW.getText();
-        String u = jtfU.getText();
-        String p = jtfPW.getText();
-        
-        boolean isAvailable = ClusterGateway.ping(h,u,p);
-        
-        if ( isAvailable ) this.jtfGW.setForeground(Color.GREEN);
-        else this.jtfGW.setForeground(Color.RED);
+        try {
+            String h = jtfGW.getText();
+            String u = jtfU.getText();
+            String p = jtfPW.getText();
+            
+            ClusterGateway.init(h, u, p);
+
+            
+            
+            boolean isAvailable = ClusterGateway.ping(h,u,p);
+           
+            
+            if ( isAvailable ) {
+                this.jtfGW.setForeground(Color.GREEN);
+                setSOLRZookeeperAdresse( h );
+            }
+            else this.jtfGW.setForeground(Color.RED);
+        } 
+        catch (IOException ex) {
+            Logger.getLogger(MorphMinerTool.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }//GEN-LAST:event_jButton20ActionPerformed
 
@@ -1208,6 +1271,17 @@ public class MorphMinerTool extends javax.swing.JFrame
        
     }//GEN-LAST:event_jButton23ActionPerformed
 
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+        // TODO add your handling code here:
+        try {
+            SOLRTool.init(this.jtfGW.getText(), this.jtfU.getText(), this.jtfPW.getText() );
+            SOLRTool.listCollection( );
+        } 
+        catch (IOException ex) {
+            Logger.getLogger(MorphMinerTool.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton24ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1272,6 +1346,7 @@ public class MorphMinerTool extends javax.swing.JFrame
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -1384,8 +1459,9 @@ public class MorphMinerTool extends javax.swing.JFrame
 
         modelI.jaLog = this.jaL;
 
-        System.setOut(new PrintStream(new TextAreaAsOutputStream(this.jaL, "$ ")));
-        System.setErr(new PrintStream(new TextAreaAsOutputStream(this.jaL, "# ")));
+        System.setOut(new PrintStream(new TextAreaAsOutputStream(this.jaL, "> ")));
+        System.setErr(new PrintStream(new TextAreaAsOutputStream(this.jaL, "[System.err] ")));
+        
 
     }
 
@@ -1443,6 +1519,11 @@ public class MorphMinerTool extends javax.swing.JFrame
         
         System.out.println( "> Snippet is now in BUFFER ... use [CTRL+V]" );
         
+    }
+
+    private void setSOLRZookeeperAdresse(String h) {
+        String end = jtfZK.getText().split(":")[1];
+        jtfZK.setText( h + ":" + end );
     }
 
 }

@@ -5,6 +5,7 @@
  */
 package de.bitocean.mm;
 
+import de.bitocean.mm.importer.ResultLineImporter;
 import java.io.File;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
@@ -60,6 +61,9 @@ public class MMAppRunner extends Configured implements Tool {
         scb.login();
         System.out.println("*** SemanticContextBridge.init() # done! ***\n");
         app = new MMApp();
+        
+        ResultLineImporter.init();
+        
         return app.run(strings);    
     }
 

@@ -10,18 +10,4 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /target/
-hadoop.log.2014-12-02
-morphline-test-1708611761526675535.conf
-morphline-test-1908933885884491904.conf
-morphline-test-2140612878414661225.conf
-morphline-test-2244018167167320864.conf
-morphline-test-2963451658892224610.conf
-morphline-test-4324284556342565574.conf
-morphline-test-4492944893510130334.conf
-morphline-test-4993842154772783948.conf
-morphline-test-5243941701945884472.conf
-morphline-test-5338683095435700604.conf
-morphline-test-5400566261506108780.conf
-morphline-test-5968407649381511019.conf
-morphline-test-6068299490514365310.conf
-morphline-test-8535340075455840191.conf
+/tmp/
