@@ -180,7 +180,8 @@ public class GMailLoader {
             if (content instanceof String) {
                 String body = (String) content;
                 cont = body;
-            } else if (content instanceof Multipart) {
+            } 
+            else if (content instanceof Multipart) {
 
                 MimeMultipart mmp = (MimeMultipart) content;
                 for (int i = 0; i < mmp.getCount(); i++) {

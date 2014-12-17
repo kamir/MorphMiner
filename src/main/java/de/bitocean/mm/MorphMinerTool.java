@@ -55,13 +55,16 @@ public class MorphMinerTool extends javax.swing.JFrame
      * Creates new form SemanticFigureEditor
      */
     public MorphMinerTool() throws IOException {
-        Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setSize(d);
         String ML_Folder = "./morphline-projects";
 
         initComponents();
         initModel(".", new LocalMorphlineStore(ML_Folder));
         initEditor();
+        
+        Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setSize(d);
+        
+    
     }
 
     /**
@@ -75,9 +78,6 @@ public class MorphMinerTool extends javax.swing.JFrame
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel6 = new javax.swing.JPanel();
-        jSplitPane2 = new javax.swing.JSplitPane();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
         manageTabs = new javax.swing.JTabbedPane();
         projectLocation = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -89,10 +89,6 @@ public class MorphMinerTool extends javax.swing.JFrame
         jButton12 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jPanel17 = new javax.swing.JPanel();
-        jButton23 = new javax.swing.JButton();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
         jPanel16 = new javax.swing.JPanel();
         jtfGW = new javax.swing.JTextField();
         jtfU = new javax.swing.JTextField();
@@ -109,6 +105,12 @@ public class MorphMinerTool extends javax.swing.JFrame
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jaL = new javax.swing.JTextArea();
+        jPanel18 = new javax.swing.JPanel();
+        jPanel17 = new javax.swing.JPanel();
+        jButton23 = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
+        jPanel19 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         editorTabs = new javax.swing.JTabbedPane();
         jpImage2 = new javax.swing.JPanel();
@@ -170,18 +172,13 @@ public class MorphMinerTool extends javax.swing.JFrame
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MorphMiner ");
 
-        jPanel6.setLayout(new java.awt.BorderLayout());
-
-        jSplitPane2.setBorder(null);
-        jSplitPane2.setDividerLocation(428);
-        jSplitPane2.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
-
-        jPanel2.setLayout(new java.awt.BorderLayout());
-
-        jPanel10.setLayout(new java.awt.BorderLayout());
+        manageTabs.setBackground(new java.awt.Color(255, 255, 255));
+        manageTabs.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
+        manageTabs.setPreferredSize(new java.awt.Dimension(1200, 600));
 
         projectLocation.setBackground(new java.awt.Color(255, 255, 255));
         projectLocation.setBorder(javax.swing.BorderFactory.createTitledBorder("Project Location"));
+        projectLocation.setRequestFocusEnabled(false);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("Base folder :");
@@ -236,40 +233,6 @@ public class MorphMinerTool extends javax.swing.JFrame
             }
         });
 
-        jPanel17.setBorder(javax.swing.BorderFactory.createTitledBorder("Snip Lib Tool"));
-
-        jButton23.setText("select snippet");
-        jButton23.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton23ActionPerformed(evt);
-            }
-        });
-
-        jTextPane1.setBackground(new java.awt.Color(0, 153, 153));
-        jTextPane1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jTextPane1.setForeground(new java.awt.Color(255, 153, 0));
-        jScrollPane4.setViewportView(jTextPane1);
-
-        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
-        jPanel17.setLayout(jPanel17Layout);
-        jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addComponent(jButton23)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addComponent(jButton23)
-                .addGap(0, 297, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                .addComponent(jScrollPane4)
-                .addContainerGap())
-        );
-
         javax.swing.GroupLayout projectLocationLayout = new javax.swing.GroupLayout(projectLocation);
         projectLocation.setLayout(projectLocationLayout);
         projectLocationLayout.setHorizontalGroup(
@@ -293,32 +256,27 @@ public class MorphMinerTool extends javax.swing.JFrame
                         .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jtEIF)
                     .addComponent(jtEBF))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(240, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         projectLocationLayout.setVerticalGroup(
             projectLocationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(projectLocationLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(projectLocationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(projectLocationLayout.createSequentialGroup()
-                        .addGroup(projectLocationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(jtEBF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(projectLocationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jtEIF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(projectLocationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton5)
-                            .addComponent(jButton12)
-                            .addComponent(jButton6)
-                            .addComponent(jButton4)
-                            .addComponent(jButton13)))
-                    .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addGroup(projectLocationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jtEBF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(projectLocationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jtEIF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(projectLocationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton5)
+                    .addComponent(jButton12)
+                    .addComponent(jButton6)
+                    .addComponent(jButton4)
+                    .addComponent(jButton13))
+                .addContainerGap(421, Short.MAX_VALUE))
         );
 
         manageTabs.addTab("Project", projectLocation);
@@ -365,7 +323,7 @@ public class MorphMinerTool extends javax.swing.JFrame
                             .addComponent(jtfPW, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jtfU, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jtfGW, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(1174, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -386,7 +344,7 @@ public class MorphMinerTool extends javax.swing.JFrame
                             .addComponent(jLabel12))))
                 .addGap(12, 12, 12)
                 .addComponent(jButton20)
-                .addGap(0, 272, Short.MAX_VALUE))
+                .addGap(0, 411, Short.MAX_VALUE))
         );
 
         manageTabs.addTab("Cluster Gateway", jPanel16);
@@ -426,7 +384,7 @@ public class MorphMinerTool extends javax.swing.JFrame
                 .addGroup(dataflowDescriptorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(1003, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         dataflowDescriptorsLayout.setVerticalGroup(
             dataflowDescriptorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -438,7 +396,7 @@ public class MorphMinerTool extends javax.swing.JFrame
                 .addGroup(dataflowDescriptorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 315, Short.MAX_VALUE))
+                .addGap(0, 454, Short.MAX_VALUE))
         );
 
         manageTabs.addTab("Data Flow", dataflowDescriptors);
@@ -466,14 +424,51 @@ public class MorphMinerTool extends javax.swing.JFrame
 
         manageTabs.addTab("Log", jPanel3);
 
-        jPanel10.add(manageTabs, java.awt.BorderLayout.PAGE_START);
+        jPanel18.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.add(jPanel10, java.awt.BorderLayout.CENTER);
+        jPanel17.setBorder(javax.swing.BorderFactory.createTitledBorder("Snip Lib Tool"));
 
-        jSplitPane2.setTopComponent(jPanel2);
+        jButton23.setText("select snippet");
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
+
+        jTextPane1.setBackground(new java.awt.Color(0, 153, 153));
+        jTextPane1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jTextPane1.setForeground(new java.awt.Color(255, 153, 0));
+        jScrollPane4.setViewportView(jTextPane1);
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addComponent(jButton23)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1023, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addComponent(jButton23)
+                .addGap(0, 501, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                .addComponent(jScrollPane4)
+                .addContainerGap())
+        );
+
+        jPanel18.add(jPanel17, java.awt.BorderLayout.CENTER);
+
+        manageTabs.addTab("Snippets", jPanel18);
+
+        jPanel19.setLayout(new java.awt.BorderLayout());
 
         jPanel14.setLayout(new java.awt.BorderLayout());
 
+        editorTabs.setTabPlacement(javax.swing.JTabbedPane.LEFT);
         editorTabs.setMaximumSize(new java.awt.Dimension(480, 246));
         editorTabs.setMinimumSize(new java.awt.Dimension(480, 246));
 
@@ -633,7 +628,7 @@ public class MorphMinerTool extends javax.swing.JFrame
         ttlEditorPane.setMinimumSize(new java.awt.Dimension(600, 200));
         ttlEditorPane.setLayout(new java.awt.BorderLayout());
 
-        jLabel8.setText("ZK Servers: ");
+        jLabel8.setText("ZK : ");
         jPanel12.add(jLabel8);
 
         jtfZK.setBackground(new java.awt.Color(255, 255, 204));
@@ -660,7 +655,7 @@ public class MorphMinerTool extends javax.swing.JFrame
         });
         jPanel12.add(jtfCollection);
 
-        jButton9.setText("create instancedir on cluster");
+        jButton9.setText("create instancedir");
         jButton9.setToolTipText("The instancedir and the collection are created on the cluster with a default configuration.");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -695,7 +690,7 @@ public class MorphMinerTool extends javax.swing.JFrame
 
         jPanel13.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
-        jLabel13.setText("flume configuration file : ");
+        jLabel13.setText("flume configuration : ");
         jPanel13.add(jLabel13);
 
         jtfFlumeCFGFileName.setText(" ");
@@ -765,11 +760,11 @@ public class MorphMinerTool extends javax.swing.JFrame
         jpImage3.setLayout(jpImage3Layout);
         jpImage3Layout.setHorizontalGroup(
             jpImage3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1515, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jpImage3Layout.setVerticalGroup(
             jpImage3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1022, Short.MAX_VALUE)
+            .addGap(0, 533, Short.MAX_VALUE)
         );
 
         editorTabs.addTab("Avro-Schema (*.avsc)", jpImage3);
@@ -802,9 +797,11 @@ public class MorphMinerTool extends javax.swing.JFrame
 
         jPanel14.add(editorTabs, java.awt.BorderLayout.CENTER);
 
-        jSplitPane2.setBottomComponent(jPanel14);
+        jPanel19.add(jPanel14, java.awt.BorderLayout.CENTER);
 
-        jPanel6.add(jSplitPane2, java.awt.BorderLayout.CENTER);
+        manageTabs.addTab("Editors", jPanel19);
+
+        jPanel6.add(manageTabs);
 
         getContentPane().add(jPanel6, java.awt.BorderLayout.CENTER);
 
@@ -1371,7 +1368,6 @@ public class MorphMinerTool extends javax.swing.JFrame
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
@@ -1379,7 +1375,8 @@ public class MorphMinerTool extends javax.swing.JFrame
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -1391,7 +1388,6 @@ public class MorphMinerTool extends javax.swing.JFrame
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JSplitPane jSplitPane2;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField2;
