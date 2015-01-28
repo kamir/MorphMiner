@@ -1,0 +1,1218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<graph edgedefault="directed">
+
+<key id="name" for="node" attr.name="name" attr.type="string"/>
+<key id="expression" for="node" attr.name="expression" attr.type="string"/>
+
+<!-- ~~~~ nodes: 188 ~~~~ -->
+<node id="Hot##SubClassOf##QualitativeTemperature">
+	<data key="name">Hot^^SubClassOf^^QualitativeTemperature</data>
+	<data key="expression">Hot SubClassOf QualitativeTemperature</data>
+</node>
+<node id="Toileting##SubClassOf##PersonalNeed">
+	<data key="name">Toileting^^SubClassOf^^PersonalNeed</data>
+	<data key="expression">Toileting SubClassOf PersonalNeed</data>
+</node>
+<node id="Warm##SubClassOf##QualitativeTemperature">
+	<data key="name">Warm^^SubClassOf^^QualitativeTemperature</data>
+	<data key="expression">Warm SubClassOf QualitativeTemperature</data>
+</node>
+<node id="OtherContext##SubClassOf##Context">
+	<data key="name">OtherContext^^SubClassOf^^Context</data>
+	<data key="expression">OtherContext SubClassOf Context</data>
+</node>
+<node id="timepoint_021##Type##Timepoint">
+	<data key="name">timepoint_021^^Type^^Timepoint</data>
+	<data key="expression">timepoint_021 Type Timepoint</data>
+</node>
+<node id="Class##Winter">
+	<data key="name">Winter</data>
+	<data key="expression">Class: Winter</data>
+</node>
+<node id="Class##Wednesday">
+	<data key="name">Wednesday</data>
+	<data key="expression">Class: Wednesday</data>
+</node>
+<node id="Class##Temperature">
+	<data key="name">Temperature</data>
+	<data key="expression">Class: Temperature</data>
+</node>
+<node id="timepoint_011##Type##Timepoint">
+	<data key="name">timepoint_011^^Type^^Timepoint</data>
+	<data key="expression">timepoint_011 Type Timepoint</data>
+</node>
+<node id="DayOfWeek##SubClassOf##Time">
+	<data key="name">DayOfWeek^^SubClassOf^^Time</data>
+	<data key="expression">DayOfWeek SubClassOf Time</data>
+</node>
+<node id="toileting_001##Type##Toileting">
+	<data key="name">toileting_001^^Type^^Toileting</data>
+	<data key="expression">toileting_001 Type Toileting</data>
+</node>
+<node id="Class##NormalActivity">
+	<data key="name">NormalActivity</data>
+	<data key="expression">Class: NormalActivity</data>
+</node>
+<node id="Thursday##SubClassOf##Weekday">
+	<data key="name">Thursday^^SubClassOf^^Weekday</data>
+	<data key="expression">Thursday SubClassOf Weekday</data>
+</node>
+<node id="Class##DisturbedNight">
+	<data key="name">DisturbedNight</data>
+	<data key="expression">Class: DisturbedNight</data>
+</node>
+<node id="timepoint_013##hasMonthValue##1">
+	<data key="name">timepoint_013^^hasMonthValue^^1</data>
+	<data key="expression">timepoint_013 hasMonthValue 1</data>
+</node>
+<node id="Other##SubClassOf##Activity">
+	<data key="name">Other^^SubClassOf^^Activity</data>
+	<data key="expression">Other SubClassOf Activity</data>
+</node>
+<node id="Scheduled##SubClassOf##OtherContext">
+	<data key="name">Scheduled^^SubClassOf^^OtherContext</data>
+	<data key="expression">Scheduled SubClassOf OtherContext</data>
+</node>
+<node id="Saturday##SubClassOf##Weekend">
+	<data key="name">Saturday^^SubClassOf^^Weekend</data>
+	<data key="expression">Saturday SubClassOf Weekend</data>
+</node>
+<node id="Class##Afternoon">
+	<data key="name">Afternoon</data>
+	<data key="expression">Class: Afternoon</data>
+</node>
+<node id="NamedIndividual##timepoint_003">
+	<data key="name">timepoint_003</data>
+	<data key="expression">Individual: timepoint_003</data>
+</node>
+<node id="timepoint_020##hasMonthValue##11">
+	<data key="name">timepoint_020^^hasMonthValue^^11</data>
+	<data key="expression">timepoint_020 hasMonthValue 11</data>
+</node>
+<node id="NamedIndividual##timepoint_002">
+	<data key="name">timepoint_002</data>
+	<data key="expression">Individual: timepoint_002</data>
+</node>
+<node id="NamedIndividual##timepoint_001">
+	<data key="name">timepoint_001</data>
+	<data key="expression">Individual: timepoint_001</data>
+</node>
+<node id="Class##Friday">
+	<data key="name">Friday</data>
+	<data key="expression">Class: Friday</data>
+</node>
+<node id="Class##Time">
+	<data key="name">Time</data>
+	<data key="expression">Class: Time</data>
+</node>
+<node id="timepoint_010##Type##Timepoint">
+	<data key="name">timepoint_010^^Type^^Timepoint</data>
+	<data key="expression">timepoint_010 Type Timepoint</data>
+</node>
+<node id="Class##VeryHot">
+	<data key="name">VeryHot</data>
+	<data key="expression">Class: VeryHot</data>
+</node>
+<node id="Class##DayOfWeek">
+	<data key="name">DayOfWeek</data>
+	<data key="expression">Class: DayOfWeek</data>
+</node>
+<node id="NamedIndividual##timepoint_010">
+	<data key="name">timepoint_010</data>
+	<data key="expression">Individual: timepoint_010</data>
+</node>
+<node id="Class##Toileting">
+	<data key="name">Toileting</data>
+	<data key="expression">Class: Toileting</data>
+</node>
+<node id="timepoint_020##Type##Timepoint">
+	<data key="name">timepoint_020^^Type^^Timepoint</data>
+	<data key="expression">timepoint_020 Type Timepoint</data>
+</node>
+<node id="Leisure##SubClassOf##Activity">
+	<data key="name">Leisure^^SubClassOf^^Activity</data>
+	<data key="expression">Leisure SubClassOf Activity</data>
+</node>
+<node id="timepoint_004##hasMonthValue##1">
+	<data key="name">timepoint_004^^hasMonthValue^^1</data>
+	<data key="expression">timepoint_004 hasMonthValue 1</data>
+</node>
+<node id="NamedIndividual##toileting_001">
+	<data key="name">toileting_001</data>
+	<data key="expression">Individual: toileting_001</data>
+</node>
+<node id="Class##DurationAbnormalityToileting">
+	<data key="name">DurationAbnormalityToileting</data>
+	<data key="expression">Class: DurationAbnormalityToileting</data>
+</node>
+<node id="Weekday##SubClassOf##DayOfWeek">
+	<data key="name">Weekday^^SubClassOf^^DayOfWeek</data>
+	<data key="expression">Weekday SubClassOf DayOfWeek</data>
+</node>
+<node id="timepoint_019##hasMonthValue##10">
+	<data key="name">timepoint_019^^hasMonthValue^^10</data>
+	<data key="expression">timepoint_019 hasMonthValue 10</data>
+</node>
+<node id="timepoint_012##Type##Timepoint">
+	<data key="name">timepoint_012^^Type^^Timepoint</data>
+	<data key="expression">timepoint_012 Type Timepoint</data>
+</node>
+<node id="PreparingLunch##SubClassOf##DomesticWork">
+	<data key="name">PreparingLunch^^SubClassOf^^DomesticWork</data>
+	<data key="expression">PreparingLunch SubClassOf DomesticWork</data>
+</node>
+<node id="timepoint_010##hasMonthValue##11">
+	<data key="name">timepoint_010^^hasMonthValue^^11</data>
+	<data key="expression">timepoint_010 hasMonthValue 11</data>
+</node>
+<node id="timepoint_002##Type##Timepoint">
+	<data key="name">timepoint_002^^Type^^Timepoint</data>
+	<data key="expression">timepoint_002 Type Timepoint</data>
+</node>
+<node id="Class##UsingHeater">
+	<data key="name">UsingHeater</data>
+	<data key="expression">Class: UsingHeater</data>
+</node>
+<node id="Class##Context">
+	<data key="name">Context</data>
+	<data key="expression">Class: Context</data>
+</node>
+<node id="timepoint_005##hasMonthValue##2">
+	<data key="name">timepoint_005^^hasMonthValue^^2</data>
+	<data key="expression">timepoint_005 hasMonthValue 2</data>
+</node>
+<node id="Class##Tuesday">
+	<data key="name">Tuesday</data>
+	<data key="expression">Class: Tuesday</data>
+</node>
+<node id="timepoint_018##Type##Timepoint">
+	<data key="name">timepoint_018^^Type^^Timepoint</data>
+	<data key="expression">timepoint_018 Type Timepoint</data>
+</node>
+<node id="Class##SpatialAbnormality">
+	<data key="name">SpatialAbnormality</data>
+	<data key="expression">Class: SpatialAbnormality</data>
+</node>
+<node id="Summer##SubClassOf##SeasonOfYear">
+	<data key="name">Summer^^SubClassOf^^SeasonOfYear</data>
+	<data key="expression">Summer SubClassOf SeasonOfYear</data>
+</node>
+<node id="Showering##SubClassOf##PersonalNeed">
+	<data key="name">Showering^^SubClassOf^^PersonalNeed</data>
+	<data key="expression">Showering SubClassOf PersonalNeed</data>
+</node>
+<node id="Class##Leisure">
+	<data key="name">Leisure</data>
+	<data key="expression">Class: Leisure</data>
+</node>
+<node id="Wednesday##SubClassOf##Weekday">
+	<data key="name">Wednesday^^SubClassOf^^Weekday</data>
+	<data key="expression">Wednesday SubClassOf Weekday</data>
+</node>
+<node id="Class##Napping">
+	<data key="name">Napping</data>
+	<data key="expression">Class: Napping</data>
+</node>
+<node id="Napping##SubClassOf##PersonalNeed">
+	<data key="name">Napping^^SubClassOf^^PersonalNeed</data>
+	<data key="expression">Napping SubClassOf PersonalNeed</data>
+</node>
+<node id="timepoint_016##Type##Timepoint">
+	<data key="name">timepoint_016^^Type^^Timepoint</data>
+	<data key="expression">timepoint_016 Type Timepoint</data>
+</node>
+<node id="timepoint_014##hasMonthValue##4">
+	<data key="name">timepoint_014^^hasMonthValue^^4</data>
+	<data key="expression">timepoint_014 hasMonthValue 4</data>
+</node>
+<node id="EquivalentClass##Summer">
+	<data key="name">Rule^^Summer</data>
+	<data key="expression">Summer EquivalentTo (Timepoint and (hasMonthValue some double[&gt;= 11.5])) or (hasMonthValue some double[&lt;= 2.5])</data>
+</node>
+<node id="Class##DoingLaundry">
+	<data key="name">DoingLaundry</data>
+	<data key="expression">Class: DoingLaundry</data>
+</node>
+<node id="Autumn##SubClassOf##SeasonOfYear">
+	<data key="name">Autumn^^SubClassOf^^SeasonOfYear</data>
+	<data key="expression">Autumn SubClassOf SeasonOfYear</data>
+</node>
+<node id="timepoint_018##hasMonthValue##8">
+	<data key="name">timepoint_018^^hasMonthValue^^8</data>
+	<data key="expression">timepoint_018 hasMonthValue 8</data>
+</node>
+<node id="timepoint_001##hasMonthValue##6">
+	<data key="name">timepoint_001^^hasMonthValue^^6</data>
+	<data key="expression">timepoint_001 hasMonthValue 6</data>
+</node>
+<node id="timepoint_016##hasMonthValue##6">
+	<data key="name">timepoint_016^^hasMonthValue^^6</data>
+	<data key="expression">timepoint_016 hasMonthValue 6</data>
+</node>
+<node id="Class##Evening">
+	<data key="name">Evening</data>
+	<data key="expression">Class: Evening</data>
+</node>
+<node id="Class##Thursday">
+	<data key="name">Thursday</data>
+	<data key="expression">Class: Thursday</data>
+</node>
+<node id="timepoint_006##hasMonthValue##4">
+	<data key="name">timepoint_006^^hasMonthValue^^4</data>
+	<data key="expression">timepoint_006 hasMonthValue 4</data>
+</node>
+<node id="timepoint_008##Type##Timepoint">
+	<data key="name">timepoint_008^^Type^^Timepoint</data>
+	<data key="expression">timepoint_008 Type Timepoint</data>
+</node>
+<node id="Class##WatchingTV">
+	<data key="name">WatchingTV</data>
+	<data key="expression">Class: WatchingTV</data>
+</node>
+<node id="StarttimeAbnormality##SubClassOf##TemporalAbnormality">
+	<data key="name">StarttimeAbnormality^^SubClassOf^^TemporalAbnormality</data>
+	<data key="expression">StarttimeAbnormality SubClassOf TemporalAbnormality</data>
+</node>
+<node id="timepoint_009##hasMonthValue##12">
+	<data key="name">timepoint_009^^hasMonthValue^^12</data>
+	<data key="expression">timepoint_009 hasMonthValue 12</data>
+</node>
+<node id="timepoint_002##hasMonthValue##7">
+	<data key="name">timepoint_002^^hasMonthValue^^7</data>
+	<data key="expression">timepoint_002 hasMonthValue 7</data>
+</node>
+<node id="DurationAbnormality##SubClassOf##TemporalAbnormality">
+	<data key="name">DurationAbnormality^^SubClassOf^^TemporalAbnormality</data>
+	<data key="expression">DurationAbnormality SubClassOf TemporalAbnormality</data>
+</node>
+<node id="QualitativeTemperature##SubClassOf##Temperature">
+	<data key="name">QualitativeTemperature^^SubClassOf^^Temperature</data>
+	<data key="expression">QualitativeTemperature SubClassOf Temperature</data>
+</node>
+<node id="Class##PreparingLunch">
+	<data key="name">PreparingLunch</data>
+	<data key="expression">Class: PreparingLunch</data>
+</node>
+<node id="Class##Spring">
+	<data key="name">Spring</data>
+	<data key="expression">Class: Spring</data>
+</node>
+<node id="Class##PersonalNeed">
+	<data key="name">PersonalNeed</data>
+	<data key="expression">Class: PersonalNeed</data>
+</node>
+<node id="Class##GoingOutForWork">
+	<data key="name">GoingOutForWork</data>
+	<data key="expression">Class: GoingOutForWork</data>
+</node>
+<node id="Class##Timepoint">
+	<data key="name">Timepoint</data>
+	<data key="expression">Class: Timepoint</data>
+</node>
+<node id="Weekend##SubClassOf##DayOfWeek">
+	<data key="name">Weekend^^SubClassOf^^DayOfWeek</data>
+	<data key="expression">Weekend SubClassOf DayOfWeek</data>
+</node>
+<node id="GoingToChurch##SubClassOf##Other">
+	<data key="name">GoingToChurch^^SubClassOf^^Other</data>
+	<data key="expression">GoingToChurch SubClassOf Other</data>
+</node>
+<node id="Class##GoingToChurch">
+	<data key="name">GoingToChurch</data>
+	<data key="expression">Class: GoingToChurch</data>
+</node>
+<node id="DurationAbnormalityToileting##SubClassOf##DurationAbnormality">
+	<data key="name">DurationAbnormalityToileting^^SubClassOf^^DurationAbnormality</data>
+	<data key="expression">DurationAbnormalityToileting SubClassOf DurationAbnormality</data>
+</node>
+<node id="Class##Saturday">
+	<data key="name">Saturday</data>
+	<data key="expression">Class: Saturday</data>
+</node>
+<node id="DurationAbnormalityShowering##SubClassOf##DurationAbnormality">
+	<data key="name">DurationAbnormalityShowering^^SubClassOf^^DurationAbnormality</data>
+	<data key="expression">DurationAbnormalityShowering SubClassOf DurationAbnormality</data>
+</node>
+<node id="Monday##SubClassOf##Weekday">
+	<data key="name">Monday^^SubClassOf^^Weekday</data>
+	<data key="expression">Monday SubClassOf Weekday</data>
+</node>
+<node id="timepoint_003##Type##Timepoint">
+	<data key="name">timepoint_003^^Type^^Timepoint</data>
+	<data key="expression">timepoint_003 Type Timepoint</data>
+</node>
+<node id="Class##TemporalAbnormality">
+	<data key="name">TemporalAbnormality</data>
+	<data key="expression">Class: TemporalAbnormality</data>
+</node>
+<node id="Class##Other">
+	<data key="name">Other</data>
+	<data key="expression">Class: Other</data>
+</node>
+<node id="Duration##SubClassOf##Time">
+	<data key="name">Duration^^SubClassOf^^Time</data>
+	<data key="expression">Duration SubClassOf Time</data>
+</node>
+<node id="timepoint_015##Type##Timepoint">
+	<data key="name">timepoint_015^^Type^^Timepoint</data>
+	<data key="expression">timepoint_015 Type Timepoint</data>
+</node>
+<node id="Class##SeasonOfYear">
+	<data key="name">SeasonOfYear</data>
+	<data key="expression">Class: SeasonOfYear</data>
+</node>
+<node id="Class##Cool">
+	<data key="name">Cool</data>
+	<data key="expression">Class: Cool</data>
+</node>
+<node id="Class##PreparingDinner">
+	<data key="name">PreparingDinner</data>
+	<data key="expression">Class: PreparingDinner</data>
+</node>
+<node id="Class##PreparingBreakfast">
+	<data key="name">PreparingBreakfast</data>
+	<data key="expression">Class: PreparingBreakfast</data>
+</node>
+<node id="Sunday##SubClassOf##Weekend">
+	<data key="name">Sunday^^SubClassOf^^Weekend</data>
+	<data key="expression">Sunday SubClassOf Weekend</data>
+</node>
+<node id="Winter##SubClassOf##SeasonOfYear">
+	<data key="name">Winter^^SubClassOf^^SeasonOfYear</data>
+	<data key="expression">Winter SubClassOf SeasonOfYear</data>
+</node>
+<node id="DisturbedNight##SubClassOf##OtherContext">
+	<data key="name">DisturbedNight^^SubClassOf^^OtherContext</data>
+	<data key="expression">DisturbedNight SubClassOf OtherContext</data>
+</node>
+<node id="DoingLaundry##SubClassOf##DomesticWork">
+	<data key="name">DoingLaundry^^SubClassOf^^DomesticWork</data>
+	<data key="expression">DoingLaundry SubClassOf DomesticWork</data>
+</node>
+<node id="timepoint_019##Type##Timepoint">
+	<data key="name">timepoint_019^^Type^^Timepoint</data>
+	<data key="expression">timepoint_019 Type Timepoint</data>
+</node>
+<node id="Class##Monday">
+	<data key="name">Monday</data>
+	<data key="expression">Class: Monday</data>
+</node>
+<node id="QualitativeTimeOfDay##SubClassOf##Time">
+	<data key="name">QualitativeTimeOfDay^^SubClassOf^^Time</data>
+	<data key="expression">QualitativeTimeOfDay SubClassOf Time</data>
+</node>
+<node id="Class##Weekend">
+	<data key="name">Weekend</data>
+	<data key="expression">Class: Weekend</data>
+</node>
+<node id="SpatialAbnormality##SubClassOf##AbnormalActivity">
+	<data key="name">SpatialAbnormality^^SubClassOf^^AbnormalActivity</data>
+	<data key="expression">SpatialAbnormality SubClassOf AbnormalActivity</data>
+</node>
+<node id="timepoint_017##Type##Timepoint">
+	<data key="name">timepoint_017^^Type^^Timepoint</data>
+	<data key="expression">timepoint_017 Type Timepoint</data>
+</node>
+<node id="Class##TakingMedicine">
+	<data key="name">TakingMedicine</data>
+	<data key="expression">Class: TakingMedicine</data>
+</node>
+<node id="GoingOutForWork##SubClassOf##Other">
+	<data key="name">GoingOutForWork^^SubClassOf^^Other</data>
+	<data key="expression">GoingOutForWork SubClassOf Other</data>
+</node>
+<node id="TemporalAbnormality##SubClassOf##AbnormalActivity">
+	<data key="name">TemporalAbnormality^^SubClassOf^^AbnormalActivity</data>
+	<data key="expression">TemporalAbnormality SubClassOf AbnormalActivity</data>
+</node>
+<node id="NormalActivity##SubClassOf##Other">
+	<data key="name">NormalActivity^^SubClassOf^^Other</data>
+	<data key="expression">NormalActivity SubClassOf Other</data>
+</node>
+<node id="Class##Hot">
+	<data key="name">Hot</data>
+	<data key="expression">Class: Hot</data>
+</node>
+<node id="DomesticWork##SubClassOf##Activity">
+	<data key="name">DomesticWork^^SubClassOf^^Activity</data>
+	<data key="expression">DomesticWork SubClassOf Activity</data>
+</node>
+<node id="AbnormalActivity##SubClassOf##Activity">
+	<data key="name">AbnormalActivity^^SubClassOf^^Activity</data>
+	<data key="expression">AbnormalActivity SubClassOf Activity</data>
+</node>
+<node id="Class##DomesticWork">
+	<data key="name">DomesticWork</data>
+	<data key="expression">Class: DomesticWork</data>
+</node>
+<node id="Spring##SubClassOf##SeasonOfYear">
+	<data key="name">Spring^^SubClassOf^^SeasonOfYear</data>
+	<data key="expression">Spring SubClassOf SeasonOfYear</data>
+</node>
+<node id="Class##Scheduled">
+	<data key="name">Scheduled</data>
+	<data key="expression">Class: Scheduled</data>
+</node>
+<node id="WatchingTV##SubClassOf##Leisure">
+	<data key="name">WatchingTV^^SubClassOf^^Leisure</data>
+	<data key="expression">WatchingTV SubClassOf Leisure</data>
+</node>
+<node id="VeryCold##SubClassOf##QualitativeTemperature">
+	<data key="name">VeryCold^^SubClassOf^^QualitativeTemperature</data>
+	<data key="expression">VeryCold SubClassOf QualitativeTemperature</data>
+</node>
+<node id="VeryHot##SubClassOf##QualitativeTemperature">
+	<data key="name">VeryHot^^SubClassOf^^QualitativeTemperature</data>
+	<data key="expression">VeryHot SubClassOf QualitativeTemperature</data>
+</node>
+<node id="Class##QualitativeTemperature">
+	<data key="name">QualitativeTemperature</data>
+	<data key="expression">Class: QualitativeTemperature</data>
+</node>
+<node id="timepoint_014##Type##Timepoint">
+	<data key="name">timepoint_014^^Type^^Timepoint</data>
+	<data key="expression">timepoint_014 Type Timepoint</data>
+</node>
+<node id="timepoint_007##Type##Timepoint">
+	<data key="name">timepoint_007^^Type^^Timepoint</data>
+	<data key="expression">timepoint_007 Type Timepoint</data>
+</node>
+<node id="timepoint_021##hasMonthValue##7">
+	<data key="name">timepoint_021^^hasMonthValue^^7</data>
+	<data key="expression">timepoint_021 hasMonthValue 7</data>
+</node>
+<node id="Class##DurationAbnormality">
+	<data key="name">DurationAbnormality</data>
+	<data key="expression">Class: DurationAbnormality</data>
+</node>
+<node id="NamedIndividual##timepoint_019">
+	<data key="name">timepoint_019</data>
+	<data key="expression">Individual: timepoint_019</data>
+</node>
+<node id="Class##StarttimeAbnormality">
+	<data key="name">StarttimeAbnormality</data>
+	<data key="expression">Class: StarttimeAbnormality</data>
+</node>
+<node id="timepoint_012##hasMonthValue##12">
+	<data key="name">timepoint_012^^hasMonthValue^^12</data>
+	<data key="expression">timepoint_012 hasMonthValue 12</data>
+</node>
+<node id="Friday##SubClassOf##Weekday">
+	<data key="name">Friday^^SubClassOf^^Weekday</data>
+	<data key="expression">Friday SubClassOf Weekday</data>
+</node>
+<node id="Class##DurationAbnormalityShowering">
+	<data key="name">DurationAbnormalityShowering</data>
+	<data key="expression">Class: DurationAbnormalityShowering</data>
+</node>
+<node id="Midnight##SubClassOf##QualitativeTimeOfDay">
+	<data key="name">Midnight^^SubClassOf^^QualitativeTimeOfDay</data>
+	<data key="expression">Midnight SubClassOf QualitativeTimeOfDay</data>
+</node>
+<node id="Evening##SubClassOf##QualitativeTimeOfDay">
+	<data key="name">Evening^^SubClassOf^^QualitativeTimeOfDay</data>
+	<data key="expression">Evening SubClassOf QualitativeTimeOfDay</data>
+</node>
+<node id="NamedIndividual##timepoint_017">
+	<data key="name">timepoint_017</data>
+	<data key="expression">Individual: timepoint_017</data>
+</node>
+<node id="Class##Weekday">
+	<data key="name">Weekday</data>
+	<data key="expression">Class: Weekday</data>
+</node>
+<node id="timepoint_013##Type##Timepoint">
+	<data key="name">timepoint_013^^Type^^Timepoint</data>
+	<data key="expression">timepoint_013 Type Timepoint</data>
+</node>
+<node id="Class##Midnight">
+	<data key="name">Midnight</data>
+	<data key="expression">Class: Midnight</data>
+</node>
+<node id="Class##OtherContext">
+	<data key="name">OtherContext</data>
+	<data key="expression">Class: OtherContext</data>
+</node>
+<node id="NamedIndividual##timepoint_018">
+	<data key="name">timepoint_018</data>
+	<data key="expression">Individual: timepoint_018</data>
+</node>
+<node id="Class##Morning">
+	<data key="name">Morning</data>
+	<data key="expression">Class: Morning</data>
+</node>
+<node id="timepoint_005##Type##Timepoint">
+	<data key="name">timepoint_005^^Type^^Timepoint</data>
+	<data key="expression">timepoint_005 Type Timepoint</data>
+</node>
+<node id="EquivalentClass##Spring">
+	<data key="name">Rule^^Spring</data>
+	<data key="expression">Spring EquivalentTo (hasMonthValue some double[&gt;= 9.0]) and (hasMonthValue some double[&lt;= 11.5])</data>
+</node>
+<node id="NamedIndividual##timepoint_004">
+	<data key="name">timepoint_004</data>
+	<data key="expression">Individual: timepoint_004</data>
+</node>
+<node id="Class##QualitativeTimeOfDay">
+	<data key="name">QualitativeTimeOfDay</data>
+	<data key="expression">Class: QualitativeTimeOfDay</data>
+</node>
+<node id="Class##Warm">
+	<data key="name">Warm</data>
+	<data key="expression">Class: Warm</data>
+</node>
+<node id="Class##Duration">
+	<data key="name">Duration</data>
+	<data key="expression">Class: Duration</data>
+</node>
+<node id="NamedIndividual##timepoint_016">
+	<data key="name">timepoint_016</data>
+	<data key="expression">Individual: timepoint_016</data>
+</node>
+<node id="PreparingBreakfast##SubClassOf##DomesticWork">
+	<data key="name">PreparingBreakfast^^SubClassOf^^DomesticWork</data>
+	<data key="expression">PreparingBreakfast SubClassOf DomesticWork</data>
+</node>
+<node id="NamedIndividual##timepoint_021">
+	<data key="name">timepoint_021</data>
+	<data key="expression">Individual: timepoint_021</data>
+</node>
+<node id="timepoint_009##Type##Timepoint">
+	<data key="name">timepoint_009^^Type^^Timepoint</data>
+	<data key="expression">timepoint_009 Type Timepoint</data>
+</node>
+<node id="NamedIndividual##timepoint_005">
+	<data key="name">timepoint_005</data>
+	<data key="expression">Individual: timepoint_005</data>
+</node>
+<node id="timepoint_007##hasMonthValue##3">
+	<data key="name">timepoint_007^^hasMonthValue^^3</data>
+	<data key="expression">timepoint_007 hasMonthValue 3</data>
+</node>
+<node id="SeasonOfYear##SubClassOf##Time">
+	<data key="name">SeasonOfYear^^SubClassOf^^Time</data>
+	<data key="expression">SeasonOfYear SubClassOf Time</data>
+</node>
+<node id="Class##Showering">
+	<data key="name">Showering</data>
+	<data key="expression">Class: Showering</data>
+</node>
+<node id="Class##VeryCold">
+	<data key="name">VeryCold</data>
+	<data key="expression">Class: VeryCold</data>
+</node>
+<node id="Morning##SubClassOf##QualitativeTimeOfDay">
+	<data key="name">Morning^^SubClassOf^^QualitativeTimeOfDay</data>
+	<data key="expression">Morning SubClassOf QualitativeTimeOfDay</data>
+</node>
+<node id="toileting_001##activityHasStarttime##timepoint_001">
+	<data key="name">toileting_001^^activityHasStarttime^^timepoint_001</data>
+	<data key="expression">toileting_001 activityHasStarttime timepoint_001</data>
+</node>
+<node id="timepoint_004##Type##Timepoint">
+	<data key="name">timepoint_004^^Type^^Timepoint</data>
+	<data key="expression">timepoint_004 Type Timepoint</data>
+</node>
+<node id="NamedIndividual##timepoint_014">
+	<data key="name">timepoint_014</data>
+	<data key="expression">Individual: timepoint_014</data>
+</node>
+<node id="Cool##SubClassOf##QualitativeTemperature">
+	<data key="name">Cool^^SubClassOf^^QualitativeTemperature</data>
+	<data key="expression">Cool SubClassOf QualitativeTemperature</data>
+</node>
+<node id="UsingHeater##SubClassOf##OtherContext">
+	<data key="name">UsingHeater^^SubClassOf^^OtherContext</data>
+	<data key="expression">UsingHeater SubClassOf OtherContext</data>
+</node>
+<node id="timepoint_001##Type##Timepoint">
+	<data key="name">timepoint_001^^Type^^Timepoint</data>
+	<data key="expression">timepoint_001 Type Timepoint</data>
+</node>
+<node id="Temperature##SubClassOf##Context">
+	<data key="name">Temperature^^SubClassOf^^Context</data>
+	<data key="expression">Temperature SubClassOf Context</data>
+</node>
+<node id="EquivalentClass##Winter">
+	<data key="name">Rule^^Winter</data>
+	<data key="expression">Winter EquivalentTo (hasMonthValue some double[&gt;= 5.5]) and (hasMonthValue some double[&lt;= 9.0])</data>
+</node>
+<node id="Time##SubClassOf##Context">
+	<data key="name">Time^^SubClassOf^^Context</data>
+	<data key="expression">Time SubClassOf Context</data>
+</node>
+<node id="NamedIndividual##timepoint_015">
+	<data key="name">timepoint_015</data>
+	<data key="expression">Individual: timepoint_015</data>
+</node>
+<node id="PersonalNeed##SubClassOf##Activity">
+	<data key="name">PersonalNeed^^SubClassOf^^Activity</data>
+	<data key="expression">PersonalNeed SubClassOf Activity</data>
+</node>
+<node id="NamedIndividual##timepoint_006">
+	<data key="name">timepoint_006</data>
+	<data key="expression">Individual: timepoint_006</data>
+</node>
+<node id="timepoint_015##hasMonthValue##5">
+	<data key="name">timepoint_015^^hasMonthValue^^5</data>
+	<data key="expression">timepoint_015 hasMonthValue 5</data>
+</node>
+<node id="Class##Cold">
+	<data key="name">Cold</data>
+	<data key="expression">Class: Cold</data>
+</node>
+<node id="timepoint_003##hasMonthValue##8">
+	<data key="name">timepoint_003^^hasMonthValue^^8</data>
+	<data key="expression">timepoint_003 hasMonthValue 8</data>
+</node>
+<node id="Timepoint##SubClassOf##Time">
+	<data key="name">Timepoint^^SubClassOf^^Time</data>
+	<data key="expression">Timepoint SubClassOf Time</data>
+</node>
+<node id="Cold##SubClassOf##QualitativeTemperature">
+	<data key="name">Cold^^SubClassOf^^QualitativeTemperature</data>
+	<data key="expression">Cold SubClassOf QualitativeTemperature</data>
+</node>
+<node id="NamedIndividual##timepoint_012">
+	<data key="name">timepoint_012</data>
+	<data key="expression">Individual: timepoint_012</data>
+</node>
+<node id="NamedIndividual##timepoint_007">
+	<data key="name">timepoint_007</data>
+	<data key="expression">Individual: timepoint_007</data>
+</node>
+<node id="Class##Autumn">
+	<data key="name">Autumn</data>
+	<data key="expression">Class: Autumn</data>
+</node>
+<node id="Afternoon##SubClassOf##QualitativeTimeOfDay">
+	<data key="name">Afternoon^^SubClassOf^^QualitativeTimeOfDay</data>
+	<data key="expression">Afternoon SubClassOf QualitativeTimeOfDay</data>
+</node>
+<node id="timepoint_011##hasMonthValue##12">
+	<data key="name">timepoint_011^^hasMonthValue^^12</data>
+	<data key="expression">timepoint_011 hasMonthValue 12</data>
+</node>
+<node id="NamedIndividual##timepoint_013">
+	<data key="name">timepoint_013</data>
+	<data key="expression">Individual: timepoint_013</data>
+</node>
+<node id="PreparingDinner##SubClassOf##DomesticWork">
+	<data key="name">PreparingDinner^^SubClassOf^^DomesticWork</data>
+	<data key="expression">PreparingDinner SubClassOf DomesticWork</data>
+</node>
+<node id="NamedIndividual##timepoint_008">
+	<data key="name">timepoint_008</data>
+	<data key="expression">Individual: timepoint_008</data>
+</node>
+<node id="Tuesday##SubClassOf##Weekday">
+	<data key="name">Tuesday^^SubClassOf^^Weekday</data>
+	<data key="expression">Tuesday SubClassOf Weekday</data>
+</node>
+<node id="NamedIndividual##timepoint_009">
+	<data key="name">timepoint_009</data>
+	<data key="expression">Individual: timepoint_009</data>
+</node>
+<node id="EquivalentClass##Autumn">
+	<data key="name">Rule^^Autumn</data>
+	<data key="expression">Autumn EquivalentTo (hasMonthValue some double[&gt;= 2.5]) and (hasMonthValue some double[&lt;= 5.5])</data>
+</node>
+<node id="timepoint_006##Type##Timepoint">
+	<data key="name">timepoint_006^^Type^^Timepoint</data>
+	<data key="expression">timepoint_006 Type Timepoint</data>
+</node>
+<node id="TakingMedicine##SubClassOf##PersonalNeed">
+	<data key="name">TakingMedicine^^SubClassOf^^PersonalNeed</data>
+	<data key="expression">TakingMedicine SubClassOf PersonalNeed</data>
+</node>
+<node id="NamedIndividual##timepoint_011">
+	<data key="name">timepoint_011</data>
+	<data key="expression">Individual: timepoint_011</data>
+</node>
+<node id="Class##Activity">
+	<data key="name">Activity</data>
+	<data key="expression">Class: Activity</data>
+</node>
+<node id="NamedIndividual##timepoint_020">
+	<data key="name">timepoint_020</data>
+	<data key="expression">Individual: timepoint_020</data>
+</node>
+<node id="Class##AbnormalActivity">
+	<data key="name">AbnormalActivity</data>
+	<data key="expression">Class: AbnormalActivity</data>
+</node>
+<node id="timepoint_008##hasMonthValue##7">
+	<data key="name">timepoint_008^^hasMonthValue^^7</data>
+	<data key="expression">timepoint_008 hasMonthValue 7</data>
+</node>
+<node id="Class##Sunday">
+	<data key="name">Sunday</data>
+	<data key="expression">Class: Sunday</data>
+</node>
+<node id="timepoint_017##hasMonthValue##7">
+	<data key="name">timepoint_017^^hasMonthValue^^7</data>
+	<data key="expression">timepoint_017 hasMonthValue 7</data>
+</node>
+<node id="Class##Summer">
+	<data key="name">Summer</data>
+	<data key="expression">Class: Summer</data>
+</node>
+<!-- ~~~~ edges: 289 ~~~~ -->
+<!-- edges for: Hot##SubClassOf##QualitativeTemperature (2) -->
+<edge source="Hot##SubClassOf##QualitativeTemperature" target="Class##Hot"></edge>
+<edge source="Hot##SubClassOf##QualitativeTemperature" target="Class##QualitativeTemperature"></edge>
+<!-- edges for: Toileting##SubClassOf##PersonalNeed (2) -->
+<edge source="Toileting##SubClassOf##PersonalNeed" target="Class##Toileting"></edge>
+<edge source="Toileting##SubClassOf##PersonalNeed" target="Class##PersonalNeed"></edge>
+<!-- edges for: Warm##SubClassOf##QualitativeTemperature (2) -->
+<edge source="Warm##SubClassOf##QualitativeTemperature" target="Class##Warm"></edge>
+<edge source="Warm##SubClassOf##QualitativeTemperature" target="Class##QualitativeTemperature"></edge>
+<!-- edges for: OtherContext##SubClassOf##Context (2) -->
+<edge source="OtherContext##SubClassOf##Context" target="Class##OtherContext"></edge>
+<edge source="OtherContext##SubClassOf##Context" target="Class##Context"></edge>
+<!-- edges for: timepoint_021##Type##Timepoint (2) -->
+<edge source="timepoint_021##Type##Timepoint" target="NamedIndividual##timepoint_021"></edge>
+<edge source="timepoint_021##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: Class##Winter (1) -->
+<edge source="Class##Winter" target="Class##SeasonOfYear"></edge>
+<!-- edges for: Class##Wednesday (1) -->
+<edge source="Class##Wednesday" target="Class##Weekday"></edge>
+<!-- edges for: Class##Temperature (1) -->
+<edge source="Class##Temperature" target="Class##Context"></edge>
+<!-- edges for: timepoint_011##Type##Timepoint (2) -->
+<edge source="timepoint_011##Type##Timepoint" target="NamedIndividual##timepoint_011"></edge>
+<edge source="timepoint_011##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: DayOfWeek##SubClassOf##Time (2) -->
+<edge source="DayOfWeek##SubClassOf##Time" target="Class##DayOfWeek"></edge>
+<edge source="DayOfWeek##SubClassOf##Time" target="Class##Time"></edge>
+<!-- edges for: toileting_001##Type##Toileting (2) -->
+<edge source="toileting_001##Type##Toileting" target="Class##Toileting"></edge>
+<edge source="toileting_001##Type##Toileting" target="NamedIndividual##toileting_001"></edge>
+<!-- edges for: Class##NormalActivity (1) -->
+<edge source="Class##NormalActivity" target="Class##Other"></edge>
+<!-- edges for: Thursday##SubClassOf##Weekday (2) -->
+<edge source="Thursday##SubClassOf##Weekday" target="Class##Weekday"></edge>
+<edge source="Thursday##SubClassOf##Weekday" target="Class##Thursday"></edge>
+<!-- edges for: Class##DisturbedNight (1) -->
+<edge source="Class##DisturbedNight" target="Class##OtherContext"></edge>
+<!-- edges for: Other##SubClassOf##Activity (2) -->
+<edge source="Other##SubClassOf##Activity" target="Class##Activity"></edge>
+<edge source="Other##SubClassOf##Activity" target="Class##Other"></edge>
+<!-- edges for: Scheduled##SubClassOf##OtherContext (2) -->
+<edge source="Scheduled##SubClassOf##OtherContext" target="Class##OtherContext"></edge>
+<edge source="Scheduled##SubClassOf##OtherContext" target="Class##Scheduled"></edge>
+<!-- edges for: Saturday##SubClassOf##Weekend (2) -->
+<edge source="Saturday##SubClassOf##Weekend" target="Class##Saturday"></edge>
+<edge source="Saturday##SubClassOf##Weekend" target="Class##Weekend"></edge>
+<!-- edges for: Class##Afternoon (1) -->
+<edge source="Class##Afternoon" target="Class##QualitativeTimeOfDay"></edge>
+<!-- edges for: NamedIndividual##timepoint_003 (1) -->
+<edge source="NamedIndividual##timepoint_003" target="Class##Timepoint"></edge>
+<!-- edges for: NamedIndividual##timepoint_002 (1) -->
+<edge source="NamedIndividual##timepoint_002" target="Class##Timepoint"></edge>
+<!-- edges for: NamedIndividual##timepoint_001 (1) -->
+<edge source="NamedIndividual##timepoint_001" target="Class##Timepoint"></edge>
+<!-- edges for: Class##Friday (1) -->
+<edge source="Class##Friday" target="Class##Weekday"></edge>
+<!-- edges for: Class##Time (1) -->
+<edge source="Class##Time" target="Class##Context"></edge>
+<!-- edges for: timepoint_010##Type##Timepoint (2) -->
+<edge source="timepoint_010##Type##Timepoint" target="NamedIndividual##timepoint_010"></edge>
+<edge source="timepoint_010##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: Class##VeryHot (1) -->
+<edge source="Class##VeryHot" target="Class##QualitativeTemperature"></edge>
+<!-- edges for: Class##DayOfWeek (1) -->
+<edge source="Class##DayOfWeek" target="Class##Time"></edge>
+<!-- edges for: NamedIndividual##timepoint_010 (1) -->
+<edge source="NamedIndividual##timepoint_010" target="Class##Timepoint"></edge>
+<!-- edges for: Class##Toileting (1) -->
+<edge source="Class##Toileting" target="Class##PersonalNeed"></edge>
+<!-- edges for: timepoint_020##Type##Timepoint (2) -->
+<edge source="timepoint_020##Type##Timepoint" target="NamedIndividual##timepoint_020"></edge>
+<edge source="timepoint_020##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: Leisure##SubClassOf##Activity (2) -->
+<edge source="Leisure##SubClassOf##Activity" target="Class##Leisure"></edge>
+<edge source="Leisure##SubClassOf##Activity" target="Class##Activity"></edge>
+<!-- edges for: NamedIndividual##toileting_001 (2) -->
+<edge source="NamedIndividual##toileting_001" target="Class##Toileting"></edge>
+<edge source="NamedIndividual##toileting_001" target="NamedIndividual##timepoint_001"></edge>
+<!-- edges for: Class##DurationAbnormalityToileting (1) -->
+<edge source="Class##DurationAbnormalityToileting" target="Class##DurationAbnormality"></edge>
+<!-- edges for: Weekday##SubClassOf##DayOfWeek (2) -->
+<edge source="Weekday##SubClassOf##DayOfWeek" target="Class##Weekday"></edge>
+<edge source="Weekday##SubClassOf##DayOfWeek" target="Class##DayOfWeek"></edge>
+<!-- edges for: timepoint_012##Type##Timepoint (2) -->
+<edge source="timepoint_012##Type##Timepoint" target="NamedIndividual##timepoint_012"></edge>
+<edge source="timepoint_012##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: PreparingLunch##SubClassOf##DomesticWork (2) -->
+<edge source="PreparingLunch##SubClassOf##DomesticWork" target="Class##DomesticWork"></edge>
+<edge source="PreparingLunch##SubClassOf##DomesticWork" target="Class##PreparingLunch"></edge>
+<!-- edges for: timepoint_002##Type##Timepoint (2) -->
+<edge source="timepoint_002##Type##Timepoint" target="NamedIndividual##timepoint_002"></edge>
+<edge source="timepoint_002##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: Class##UsingHeater (1) -->
+<edge source="Class##UsingHeater" target="Class##OtherContext"></edge>
+<!-- edges for: Class##Tuesday (1) -->
+<edge source="Class##Tuesday" target="Class##Weekday"></edge>
+<!-- edges for: timepoint_018##Type##Timepoint (2) -->
+<edge source="timepoint_018##Type##Timepoint" target="NamedIndividual##timepoint_018"></edge>
+<edge source="timepoint_018##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: Class##SpatialAbnormality (1) -->
+<edge source="Class##SpatialAbnormality" target="Class##AbnormalActivity"></edge>
+<!-- edges for: Summer##SubClassOf##SeasonOfYear (2) -->
+<edge source="Summer##SubClassOf##SeasonOfYear" target="Class##SeasonOfYear"></edge>
+<edge source="Summer##SubClassOf##SeasonOfYear" target="Class##Summer"></edge>
+<!-- edges for: Showering##SubClassOf##PersonalNeed (2) -->
+<edge source="Showering##SubClassOf##PersonalNeed" target="Class##PersonalNeed"></edge>
+<edge source="Showering##SubClassOf##PersonalNeed" target="Class##Showering"></edge>
+<!-- edges for: Class##Leisure (1) -->
+<edge source="Class##Leisure" target="Class##Activity"></edge>
+<!-- edges for: Wednesday##SubClassOf##Weekday (2) -->
+<edge source="Wednesday##SubClassOf##Weekday" target="Class##Wednesday"></edge>
+<edge source="Wednesday##SubClassOf##Weekday" target="Class##Weekday"></edge>
+<!-- edges for: Class##Napping (1) -->
+<edge source="Class##Napping" target="Class##PersonalNeed"></edge>
+<!-- edges for: Napping##SubClassOf##PersonalNeed (2) -->
+<edge source="Napping##SubClassOf##PersonalNeed" target="Class##PersonalNeed"></edge>
+<edge source="Napping##SubClassOf##PersonalNeed" target="Class##Napping"></edge>
+<!-- edges for: timepoint_016##Type##Timepoint (2) -->
+<edge source="timepoint_016##Type##Timepoint" target="NamedIndividual##timepoint_016"></edge>
+<edge source="timepoint_016##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: EquivalentClass##Summer (15) -->
+<edge source="EquivalentClass##Summer" target="timepoint_013##hasMonthValue##1"></edge>
+<edge source="EquivalentClass##Summer" target="timepoint_009##hasMonthValue##12"></edge>
+<edge source="EquivalentClass##Summer" target="timepoint_011##Type##Timepoint"></edge>
+<edge source="EquivalentClass##Summer" target="timepoint_005##hasMonthValue##2"></edge>
+<edge source="EquivalentClass##Summer" target="timepoint_012##Type##Timepoint"></edge>
+<edge source="EquivalentClass##Summer" target="timepoint_004##hasMonthValue##1"></edge>
+<edge source="EquivalentClass##Summer" target="timepoint_012##hasMonthValue##12"></edge>
+<edge source="EquivalentClass##Summer" target="timepoint_009##Type##Timepoint"></edge>
+<edge source="EquivalentClass##Summer" target="NamedIndividual##timepoint_009"></edge>
+<edge source="EquivalentClass##Summer" target="timepoint_011##hasMonthValue##12"></edge>
+<edge source="EquivalentClass##Summer" target="NamedIndividual##timepoint_012"></edge>
+<edge source="EquivalentClass##Summer" target="NamedIndividual##timepoint_011"></edge>
+<edge source="EquivalentClass##Summer" target="NamedIndividual##timepoint_005"></edge>
+<edge source="EquivalentClass##Summer" target="NamedIndividual##timepoint_004"></edge>
+<edge source="EquivalentClass##Summer" target="NamedIndividual##timepoint_013"></edge>
+<!-- edges for: Class##DoingLaundry (1) -->
+<edge source="Class##DoingLaundry" target="Class##DomesticWork"></edge>
+<!-- edges for: Autumn##SubClassOf##SeasonOfYear (2) -->
+<edge source="Autumn##SubClassOf##SeasonOfYear" target="Class##Autumn"></edge>
+<edge source="Autumn##SubClassOf##SeasonOfYear" target="Class##SeasonOfYear"></edge>
+<!-- edges for: Class##Evening (1) -->
+<edge source="Class##Evening" target="Class##QualitativeTimeOfDay"></edge>
+<!-- edges for: Class##Thursday (1) -->
+<edge source="Class##Thursday" target="Class##Weekday"></edge>
+<!-- edges for: timepoint_008##Type##Timepoint (2) -->
+<edge source="timepoint_008##Type##Timepoint" target="NamedIndividual##timepoint_008"></edge>
+<edge source="timepoint_008##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: Class##WatchingTV (1) -->
+<edge source="Class##WatchingTV" target="Class##Leisure"></edge>
+<!-- edges for: StarttimeAbnormality##SubClassOf##TemporalAbnormality (2) -->
+<edge source="StarttimeAbnormality##SubClassOf##TemporalAbnormality" target="Class##StarttimeAbnormality"></edge>
+<edge source="StarttimeAbnormality##SubClassOf##TemporalAbnormality" target="Class##TemporalAbnormality"></edge>
+<!-- edges for: DurationAbnormality##SubClassOf##TemporalAbnormality (2) -->
+<edge source="DurationAbnormality##SubClassOf##TemporalAbnormality" target="Class##DurationAbnormality"></edge>
+<edge source="DurationAbnormality##SubClassOf##TemporalAbnormality" target="Class##TemporalAbnormality"></edge>
+<!-- edges for: QualitativeTemperature##SubClassOf##Temperature (2) -->
+<edge source="QualitativeTemperature##SubClassOf##Temperature" target="Class##Temperature"></edge>
+<edge source="QualitativeTemperature##SubClassOf##Temperature" target="Class##QualitativeTemperature"></edge>
+<!-- edges for: Class##PreparingLunch (1) -->
+<edge source="Class##PreparingLunch" target="Class##DomesticWork"></edge>
+<!-- edges for: Class##Spring (1) -->
+<edge source="Class##Spring" target="Class##SeasonOfYear"></edge>
+<!-- edges for: Class##PersonalNeed (1) -->
+<edge source="Class##PersonalNeed" target="Class##Activity"></edge>
+<!-- edges for: Class##GoingOutForWork (1) -->
+<edge source="Class##GoingOutForWork" target="Class##Other"></edge>
+<!-- edges for: Class##Timepoint (1) -->
+<edge source="Class##Timepoint" target="Class##Time"></edge>
+<!-- edges for: Weekend##SubClassOf##DayOfWeek (2) -->
+<edge source="Weekend##SubClassOf##DayOfWeek" target="Class##DayOfWeek"></edge>
+<edge source="Weekend##SubClassOf##DayOfWeek" target="Class##Weekend"></edge>
+<!-- edges for: GoingToChurch##SubClassOf##Other (2) -->
+<edge source="GoingToChurch##SubClassOf##Other" target="Class##GoingToChurch"></edge>
+<edge source="GoingToChurch##SubClassOf##Other" target="Class##Other"></edge>
+<!-- edges for: Class##GoingToChurch (1) -->
+<edge source="Class##GoingToChurch" target="Class##Other"></edge>
+<!-- edges for: DurationAbnormalityToileting##SubClassOf##DurationAbnormality (2) -->
+<edge source="DurationAbnormalityToileting##SubClassOf##DurationAbnormality" target="Class##DurationAbnormality"></edge>
+<edge source="DurationAbnormalityToileting##SubClassOf##DurationAbnormality" target="Class##DurationAbnormalityToileting"></edge>
+<!-- edges for: Class##Saturday (1) -->
+<edge source="Class##Saturday" target="Class##Weekend"></edge>
+<!-- edges for: DurationAbnormalityShowering##SubClassOf##DurationAbnormality (2) -->
+<edge source="DurationAbnormalityShowering##SubClassOf##DurationAbnormality" target="Class##DurationAbnormality"></edge>
+<edge source="DurationAbnormalityShowering##SubClassOf##DurationAbnormality" target="Class##DurationAbnormalityShowering"></edge>
+<!-- edges for: Monday##SubClassOf##Weekday (2) -->
+<edge source="Monday##SubClassOf##Weekday" target="Class##Weekday"></edge>
+<edge source="Monday##SubClassOf##Weekday" target="Class##Monday"></edge>
+<!-- edges for: timepoint_003##Type##Timepoint (2) -->
+<edge source="timepoint_003##Type##Timepoint" target="NamedIndividual##timepoint_003"></edge>
+<edge source="timepoint_003##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: Class##TemporalAbnormality (1) -->
+<edge source="Class##TemporalAbnormality" target="Class##AbnormalActivity"></edge>
+<!-- edges for: Class##Other (1) -->
+<edge source="Class##Other" target="Class##Activity"></edge>
+<!-- edges for: Duration##SubClassOf##Time (2) -->
+<edge source="Duration##SubClassOf##Time" target="Class##Time"></edge>
+<edge source="Duration##SubClassOf##Time" target="Class##Duration"></edge>
+<!-- edges for: timepoint_015##Type##Timepoint (2) -->
+<edge source="timepoint_015##Type##Timepoint" target="NamedIndividual##timepoint_015"></edge>
+<edge source="timepoint_015##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: Class##SeasonOfYear (1) -->
+<edge source="Class##SeasonOfYear" target="Class##Time"></edge>
+<!-- edges for: Class##Cool (1) -->
+<edge source="Class##Cool" target="Class##QualitativeTemperature"></edge>
+<!-- edges for: Class##PreparingDinner (1) -->
+<edge source="Class##PreparingDinner" target="Class##DomesticWork"></edge>
+<!-- edges for: Class##PreparingBreakfast (1) -->
+<edge source="Class##PreparingBreakfast" target="Class##DomesticWork"></edge>
+<!-- edges for: Sunday##SubClassOf##Weekend (2) -->
+<edge source="Sunday##SubClassOf##Weekend" target="Class##Sunday"></edge>
+<edge source="Sunday##SubClassOf##Weekend" target="Class##Weekend"></edge>
+<!-- edges for: Winter##SubClassOf##SeasonOfYear (2) -->
+<edge source="Winter##SubClassOf##SeasonOfYear" target="Class##Winter"></edge>
+<edge source="Winter##SubClassOf##SeasonOfYear" target="Class##SeasonOfYear"></edge>
+<!-- edges for: DisturbedNight##SubClassOf##OtherContext (2) -->
+<edge source="DisturbedNight##SubClassOf##OtherContext" target="Class##OtherContext"></edge>
+<edge source="DisturbedNight##SubClassOf##OtherContext" target="Class##DisturbedNight"></edge>
+<!-- edges for: DoingLaundry##SubClassOf##DomesticWork (2) -->
+<edge source="DoingLaundry##SubClassOf##DomesticWork" target="Class##DoingLaundry"></edge>
+<edge source="DoingLaundry##SubClassOf##DomesticWork" target="Class##DomesticWork"></edge>
+<!-- edges for: timepoint_019##Type##Timepoint (2) -->
+<edge source="timepoint_019##Type##Timepoint" target="NamedIndividual##timepoint_019"></edge>
+<edge source="timepoint_019##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: Class##Monday (1) -->
+<edge source="Class##Monday" target="Class##Weekday"></edge>
+<!-- edges for: QualitativeTimeOfDay##SubClassOf##Time (2) -->
+<edge source="QualitativeTimeOfDay##SubClassOf##Time" target="Class##QualitativeTimeOfDay"></edge>
+<edge source="QualitativeTimeOfDay##SubClassOf##Time" target="Class##Time"></edge>
+<!-- edges for: Class##Weekend (1) -->
+<edge source="Class##Weekend" target="Class##DayOfWeek"></edge>
+<!-- edges for: SpatialAbnormality##SubClassOf##AbnormalActivity (2) -->
+<edge source="SpatialAbnormality##SubClassOf##AbnormalActivity" target="Class##SpatialAbnormality"></edge>
+<edge source="SpatialAbnormality##SubClassOf##AbnormalActivity" target="Class##AbnormalActivity"></edge>
+<!-- edges for: timepoint_017##Type##Timepoint (2) -->
+<edge source="timepoint_017##Type##Timepoint" target="NamedIndividual##timepoint_017"></edge>
+<edge source="timepoint_017##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: Class##TakingMedicine (1) -->
+<edge source="Class##TakingMedicine" target="Class##PersonalNeed"></edge>
+<!-- edges for: GoingOutForWork##SubClassOf##Other (2) -->
+<edge source="GoingOutForWork##SubClassOf##Other" target="Class##GoingOutForWork"></edge>
+<edge source="GoingOutForWork##SubClassOf##Other" target="Class##Other"></edge>
+<!-- edges for: TemporalAbnormality##SubClassOf##AbnormalActivity (2) -->
+<edge source="TemporalAbnormality##SubClassOf##AbnormalActivity" target="Class##AbnormalActivity"></edge>
+<edge source="TemporalAbnormality##SubClassOf##AbnormalActivity" target="Class##TemporalAbnormality"></edge>
+<!-- edges for: NormalActivity##SubClassOf##Other (2) -->
+<edge source="NormalActivity##SubClassOf##Other" target="Class##NormalActivity"></edge>
+<edge source="NormalActivity##SubClassOf##Other" target="Class##Other"></edge>
+<!-- edges for: Class##Hot (1) -->
+<edge source="Class##Hot" target="Class##QualitativeTemperature"></edge>
+<!-- edges for: DomesticWork##SubClassOf##Activity (2) -->
+<edge source="DomesticWork##SubClassOf##Activity" target="Class##Activity"></edge>
+<edge source="DomesticWork##SubClassOf##Activity" target="Class##DomesticWork"></edge>
+<!-- edges for: AbnormalActivity##SubClassOf##Activity (2) -->
+<edge source="AbnormalActivity##SubClassOf##Activity" target="Class##Activity"></edge>
+<edge source="AbnormalActivity##SubClassOf##Activity" target="Class##AbnormalActivity"></edge>
+<!-- edges for: Class##DomesticWork (1) -->
+<edge source="Class##DomesticWork" target="Class##Activity"></edge>
+<!-- edges for: Spring##SubClassOf##SeasonOfYear (2) -->
+<edge source="Spring##SubClassOf##SeasonOfYear" target="Class##Spring"></edge>
+<edge source="Spring##SubClassOf##SeasonOfYear" target="Class##SeasonOfYear"></edge>
+<!-- edges for: Class##Scheduled (1) -->
+<edge source="Class##Scheduled" target="Class##OtherContext"></edge>
+<!-- edges for: WatchingTV##SubClassOf##Leisure (2) -->
+<edge source="WatchingTV##SubClassOf##Leisure" target="Class##Leisure"></edge>
+<edge source="WatchingTV##SubClassOf##Leisure" target="Class##WatchingTV"></edge>
+<!-- edges for: VeryCold##SubClassOf##QualitativeTemperature (2) -->
+<edge source="VeryCold##SubClassOf##QualitativeTemperature" target="Class##VeryCold"></edge>
+<edge source="VeryCold##SubClassOf##QualitativeTemperature" target="Class##QualitativeTemperature"></edge>
+<!-- edges for: VeryHot##SubClassOf##QualitativeTemperature (2) -->
+<edge source="VeryHot##SubClassOf##QualitativeTemperature" target="Class##VeryHot"></edge>
+<edge source="VeryHot##SubClassOf##QualitativeTemperature" target="Class##QualitativeTemperature"></edge>
+<!-- edges for: Class##QualitativeTemperature (1) -->
+<edge source="Class##QualitativeTemperature" target="Class##Temperature"></edge>
+<!-- edges for: timepoint_014##Type##Timepoint (2) -->
+<edge source="timepoint_014##Type##Timepoint" target="NamedIndividual##timepoint_014"></edge>
+<edge source="timepoint_014##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: timepoint_007##Type##Timepoint (2) -->
+<edge source="timepoint_007##Type##Timepoint" target="NamedIndividual##timepoint_007"></edge>
+<edge source="timepoint_007##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: Class##DurationAbnormality (1) -->
+<edge source="Class##DurationAbnormality" target="Class##TemporalAbnormality"></edge>
+<!-- edges for: NamedIndividual##timepoint_019 (1) -->
+<edge source="NamedIndividual##timepoint_019" target="Class##Timepoint"></edge>
+<!-- edges for: Class##StarttimeAbnormality (1) -->
+<edge source="Class##StarttimeAbnormality" target="Class##TemporalAbnormality"></edge>
+<!-- edges for: Friday##SubClassOf##Weekday (2) -->
+<edge source="Friday##SubClassOf##Weekday" target="Class##Friday"></edge>
+<edge source="Friday##SubClassOf##Weekday" target="Class##Weekday"></edge>
+<!-- edges for: Class##DurationAbnormalityShowering (1) -->
+<edge source="Class##DurationAbnormalityShowering" target="Class##DurationAbnormality"></edge>
+<!-- edges for: Midnight##SubClassOf##QualitativeTimeOfDay (2) -->
+<edge source="Midnight##SubClassOf##QualitativeTimeOfDay" target="Class##QualitativeTimeOfDay"></edge>
+<edge source="Midnight##SubClassOf##QualitativeTimeOfDay" target="Class##Midnight"></edge>
+<!-- edges for: Evening##SubClassOf##QualitativeTimeOfDay (2) -->
+<edge source="Evening##SubClassOf##QualitativeTimeOfDay" target="Class##QualitativeTimeOfDay"></edge>
+<edge source="Evening##SubClassOf##QualitativeTimeOfDay" target="Class##Evening"></edge>
+<!-- edges for: NamedIndividual##timepoint_017 (1) -->
+<edge source="NamedIndividual##timepoint_017" target="Class##Timepoint"></edge>
+<!-- edges for: Class##Weekday (1) -->
+<edge source="Class##Weekday" target="Class##DayOfWeek"></edge>
+<!-- edges for: timepoint_013##Type##Timepoint (2) -->
+<edge source="timepoint_013##Type##Timepoint" target="Class##Timepoint"></edge>
+<edge source="timepoint_013##Type##Timepoint" target="NamedIndividual##timepoint_013"></edge>
+<!-- edges for: Class##Midnight (1) -->
+<edge source="Class##Midnight" target="Class##QualitativeTimeOfDay"></edge>
+<!-- edges for: Class##OtherContext (1) -->
+<edge source="Class##OtherContext" target="Class##Context"></edge>
+<!-- edges for: NamedIndividual##timepoint_018 (1) -->
+<edge source="NamedIndividual##timepoint_018" target="Class##Timepoint"></edge>
+<!-- edges for: Class##Morning (1) -->
+<edge source="Class##Morning" target="Class##QualitativeTimeOfDay"></edge>
+<!-- edges for: timepoint_005##Type##Timepoint (2) -->
+<edge source="timepoint_005##Type##Timepoint" target="NamedIndividual##timepoint_005"></edge>
+<edge source="timepoint_005##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: EquivalentClass##Spring (6) -->
+<edge source="EquivalentClass##Spring" target="NamedIndividual##timepoint_019"></edge>
+<edge source="EquivalentClass##Spring" target="NamedIndividual##timepoint_020"></edge>
+<edge source="EquivalentClass##Spring" target="NamedIndividual##timepoint_010"></edge>
+<edge source="EquivalentClass##Spring" target="timepoint_019##hasMonthValue##10"></edge>
+<edge source="EquivalentClass##Spring" target="timepoint_020##hasMonthValue##11"></edge>
+<edge source="EquivalentClass##Spring" target="timepoint_010##hasMonthValue##11"></edge>
+<!-- edges for: NamedIndividual##timepoint_004 (1) -->
+<edge source="NamedIndividual##timepoint_004" target="Class##Timepoint"></edge>
+<!-- edges for: Class##QualitativeTimeOfDay (1) -->
+<edge source="Class##QualitativeTimeOfDay" target="Class##Time"></edge>
+<!-- edges for: Class##Warm (1) -->
+<edge source="Class##Warm" target="Class##QualitativeTemperature"></edge>
+<!-- edges for: Class##Duration (1) -->
+<edge source="Class##Duration" target="Class##Time"></edge>
+<!-- edges for: NamedIndividual##timepoint_016 (1) -->
+<edge source="NamedIndividual##timepoint_016" target="Class##Timepoint"></edge>
+<!-- edges for: PreparingBreakfast##SubClassOf##DomesticWork (2) -->
+<edge source="PreparingBreakfast##SubClassOf##DomesticWork" target="Class##PreparingBreakfast"></edge>
+<edge source="PreparingBreakfast##SubClassOf##DomesticWork" target="Class##DomesticWork"></edge>
+<!-- edges for: NamedIndividual##timepoint_021 (1) -->
+<edge source="NamedIndividual##timepoint_021" target="Class##Timepoint"></edge>
+<!-- edges for: timepoint_009##Type##Timepoint (2) -->
+<edge source="timepoint_009##Type##Timepoint" target="NamedIndividual##timepoint_009"></edge>
+<edge source="timepoint_009##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: NamedIndividual##timepoint_005 (1) -->
+<edge source="NamedIndividual##timepoint_005" target="Class##Timepoint"></edge>
+<!-- edges for: SeasonOfYear##SubClassOf##Time (2) -->
+<edge source="SeasonOfYear##SubClassOf##Time" target="Class##SeasonOfYear"></edge>
+<edge source="SeasonOfYear##SubClassOf##Time" target="Class##Time"></edge>
+<!-- edges for: Class##Showering (1) -->
+<edge source="Class##Showering" target="Class##PersonalNeed"></edge>
+<!-- edges for: Class##VeryCold (1) -->
+<edge source="Class##VeryCold" target="Class##QualitativeTemperature"></edge>
+<!-- edges for: Morning##SubClassOf##QualitativeTimeOfDay (2) -->
+<edge source="Morning##SubClassOf##QualitativeTimeOfDay" target="Class##QualitativeTimeOfDay"></edge>
+<edge source="Morning##SubClassOf##QualitativeTimeOfDay" target="Class##Morning"></edge>
+<!-- edges for: toileting_001##activityHasStarttime##timepoint_001 (2) -->
+<edge source="toileting_001##activityHasStarttime##timepoint_001" target="NamedIndividual##toileting_001"></edge>
+<edge source="toileting_001##activityHasStarttime##timepoint_001" target="NamedIndividual##timepoint_001"></edge>
+<!-- edges for: timepoint_004##Type##Timepoint (2) -->
+<edge source="timepoint_004##Type##Timepoint" target="NamedIndividual##timepoint_004"></edge>
+<edge source="timepoint_004##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: NamedIndividual##timepoint_014 (1) -->
+<edge source="NamedIndividual##timepoint_014" target="Class##Timepoint"></edge>
+<!-- edges for: Cool##SubClassOf##QualitativeTemperature (2) -->
+<edge source="Cool##SubClassOf##QualitativeTemperature" target="Class##Cool"></edge>
+<edge source="Cool##SubClassOf##QualitativeTemperature" target="Class##QualitativeTemperature"></edge>
+<!-- edges for: UsingHeater##SubClassOf##OtherContext (2) -->
+<edge source="UsingHeater##SubClassOf##OtherContext" target="Class##UsingHeater"></edge>
+<edge source="UsingHeater##SubClassOf##OtherContext" target="Class##OtherContext"></edge>
+<!-- edges for: timepoint_001##Type##Timepoint (2) -->
+<edge source="timepoint_001##Type##Timepoint" target="NamedIndividual##timepoint_001"></edge>
+<edge source="timepoint_001##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: Temperature##SubClassOf##Context (2) -->
+<edge source="Temperature##SubClassOf##Context" target="Class##Temperature"></edge>
+<edge source="Temperature##SubClassOf##Context" target="Class##Context"></edge>
+<!-- edges for: EquivalentClass##Winter (17) -->
+<edge source="EquivalentClass##Winter" target="timepoint_018##hasMonthValue##8"></edge>
+<edge source="EquivalentClass##Winter" target="timepoint_008##hasMonthValue##7"></edge>
+<edge source="EquivalentClass##Winter" target="timepoint_001##hasMonthValue##6"></edge>
+<edge source="EquivalentClass##Winter" target="timepoint_003##hasMonthValue##8"></edge>
+<edge source="EquivalentClass##Winter" target="timepoint_008##Type##Timepoint"></edge>
+<edge source="EquivalentClass##Winter" target="timepoint_021##hasMonthValue##7"></edge>
+<edge source="EquivalentClass##Winter" target="timepoint_002##hasMonthValue##7"></edge>
+<edge source="EquivalentClass##Winter" target="timepoint_017##hasMonthValue##7"></edge>
+<edge source="EquivalentClass##Winter" target="timepoint_016##hasMonthValue##6"></edge>
+<edge source="EquivalentClass##Winter" target="NamedIndividual##timepoint_018"></edge>
+<edge source="EquivalentClass##Winter" target="NamedIndividual##timepoint_017"></edge>
+<edge source="EquivalentClass##Winter" target="NamedIndividual##timepoint_008"></edge>
+<edge source="EquivalentClass##Winter" target="NamedIndividual##timepoint_021"></edge>
+<edge source="EquivalentClass##Winter" target="NamedIndividual##timepoint_003"></edge>
+<edge source="EquivalentClass##Winter" target="NamedIndividual##timepoint_002"></edge>
+<edge source="EquivalentClass##Winter" target="NamedIndividual##timepoint_016"></edge>
+<edge source="EquivalentClass##Winter" target="NamedIndividual##timepoint_001"></edge>
+<!-- edges for: Time##SubClassOf##Context (2) -->
+<edge source="Time##SubClassOf##Context" target="Class##Context"></edge>
+<edge source="Time##SubClassOf##Context" target="Class##Time"></edge>
+<!-- edges for: NamedIndividual##timepoint_015 (1) -->
+<edge source="NamedIndividual##timepoint_015" target="Class##Timepoint"></edge>
+<!-- edges for: PersonalNeed##SubClassOf##Activity (2) -->
+<edge source="PersonalNeed##SubClassOf##Activity" target="Class##PersonalNeed"></edge>
+<edge source="PersonalNeed##SubClassOf##Activity" target="Class##Activity"></edge>
+<!-- edges for: NamedIndividual##timepoint_006 (1) -->
+<edge source="NamedIndividual##timepoint_006" target="Class##Timepoint"></edge>
+<!-- edges for: Class##Cold (1) -->
+<edge source="Class##Cold" target="Class##QualitativeTemperature"></edge>
+<!-- edges for: Timepoint##SubClassOf##Time (2) -->
+<edge source="Timepoint##SubClassOf##Time" target="Class##Time"></edge>
+<edge source="Timepoint##SubClassOf##Time" target="Class##Timepoint"></edge>
+<!-- edges for: Cold##SubClassOf##QualitativeTemperature (2) -->
+<edge source="Cold##SubClassOf##QualitativeTemperature" target="Class##QualitativeTemperature"></edge>
+<edge source="Cold##SubClassOf##QualitativeTemperature" target="Class##Cold"></edge>
+<!-- edges for: NamedIndividual##timepoint_012 (1) -->
+<edge source="NamedIndividual##timepoint_012" target="Class##Timepoint"></edge>
+<!-- edges for: NamedIndividual##timepoint_007 (1) -->
+<edge source="NamedIndividual##timepoint_007" target="Class##Timepoint"></edge>
+<!-- edges for: Class##Autumn (1) -->
+<edge source="Class##Autumn" target="Class##SeasonOfYear"></edge>
+<!-- edges for: Afternoon##SubClassOf##QualitativeTimeOfDay (2) -->
+<edge source="Afternoon##SubClassOf##QualitativeTimeOfDay" target="Class##QualitativeTimeOfDay"></edge>
+<edge source="Afternoon##SubClassOf##QualitativeTimeOfDay" target="Class##Afternoon"></edge>
+<!-- edges for: NamedIndividual##timepoint_013 (1) -->
+<edge source="NamedIndividual##timepoint_013" target="Class##Timepoint"></edge>
+<!-- edges for: PreparingDinner##SubClassOf##DomesticWork (2) -->
+<edge source="PreparingDinner##SubClassOf##DomesticWork" target="Class##DomesticWork"></edge>
+<edge source="PreparingDinner##SubClassOf##DomesticWork" target="Class##PreparingDinner"></edge>
+<!-- edges for: NamedIndividual##timepoint_008 (1) -->
+<edge source="NamedIndividual##timepoint_008" target="Class##Timepoint"></edge>
+<!-- edges for: Tuesday##SubClassOf##Weekday (2) -->
+<edge source="Tuesday##SubClassOf##Weekday" target="Class##Tuesday"></edge>
+<edge source="Tuesday##SubClassOf##Weekday" target="Class##Weekday"></edge>
+<!-- edges for: NamedIndividual##timepoint_009 (1) -->
+<edge source="NamedIndividual##timepoint_009" target="Class##Timepoint"></edge>
+<!-- edges for: EquivalentClass##Autumn (8) -->
+<edge source="EquivalentClass##Autumn" target="timepoint_007##hasMonthValue##3"></edge>
+<edge source="EquivalentClass##Autumn" target="NamedIndividual##timepoint_007"></edge>
+<edge source="EquivalentClass##Autumn" target="timepoint_006##hasMonthValue##4"></edge>
+<edge source="EquivalentClass##Autumn" target="NamedIndividual##timepoint_006"></edge>
+<edge source="EquivalentClass##Autumn" target="timepoint_015##hasMonthValue##5"></edge>
+<edge source="EquivalentClass##Autumn" target="timepoint_014##hasMonthValue##4"></edge>
+<edge source="EquivalentClass##Autumn" target="NamedIndividual##timepoint_015"></edge>
+<edge source="EquivalentClass##Autumn" target="NamedIndividual##timepoint_014"></edge>
+<!-- edges for: timepoint_006##Type##Timepoint (2) -->
+<edge source="timepoint_006##Type##Timepoint" target="NamedIndividual##timepoint_006"></edge>
+<edge source="timepoint_006##Type##Timepoint" target="Class##Timepoint"></edge>
+<!-- edges for: TakingMedicine##SubClassOf##PersonalNeed (2) -->
+<edge source="TakingMedicine##SubClassOf##PersonalNeed" target="Class##PersonalNeed"></edge>
+<edge source="TakingMedicine##SubClassOf##PersonalNeed" target="Class##TakingMedicine"></edge>
+<!-- edges for: NamedIndividual##timepoint_011 (1) -->
+<edge source="NamedIndividual##timepoint_011" target="Class##Timepoint"></edge>
+<!-- edges for: NamedIndividual##timepoint_020 (1) -->
+<edge source="NamedIndividual##timepoint_020" target="Class##Timepoint"></edge>
+<!-- edges for: Class##AbnormalActivity (1) -->
+<edge source="Class##AbnormalActivity" target="Class##Activity"></edge>
+<!-- edges for: Class##Sunday (1) -->
+<edge source="Class##Sunday" target="Class##Weekend"></edge>
+<!-- edges for: Class##Summer (1) -->
+<edge source="Class##Summer" target="Class##SeasonOfYear"></edge>
+
+</graph>
+</graphml>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<graph edgedefault="directed">
+
+<key id="name" for="node" attr.name="name" attr.type="string"/>
+<key id="expression" for="node" attr.name="expression" attr.type="string"/>
+<key id="weight" for="edge" attr.name="weight" attr.type="double"/>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~ NODE: 34~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~ nodes for Class: 19 ~~~~ -->
+<node id="Class##Autumn">
+	<data key="name">Autumn</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##Cold">
+	<data key="name">Cold</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##Cool">
+	<data key="name">Cool</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##DisturbedNight">
+	<data key="name">DisturbedNight</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##Duration">
+	<data key="name">Duration</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##Hot">
+	<data key="name">Hot</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##OtherContext">
+	<data key="name">OtherContext</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##QualitativeTemperature">
+	<data key="name">QualitativeTemperature</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##Scheduled">
+	<data key="name">Scheduled</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##Showering">
+	<data key="name">Showering</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##Spring">
+	<data key="name">Spring</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##Summer">
+	<data key="name">Summer</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##Temperature">
+	<data key="name">Temperature</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##Timepoint">
+	<data key="name">Timepoint</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##UsingHeater">
+	<data key="name">UsingHeater</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##VeryCold">
+	<data key="name">VeryCold</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##VeryHot">
+	<data key="name">VeryHot</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##Warm">
+	<data key="name">Warm</data>
+	<data key="expression">Class</data>
+</node>
+<node id="Class##Winter">
+	<data key="name">Winter</data>
+	<data key="expression">Class</data>
+</node>
+
+<!-- ~~~~ nodes for Object Properties: 4 ~~~~ -->
+<node id="ObjectProperty##activityHasDuration">
+	<data key="name">activityHasDuration</data>
+	<data key="expression">ObjectProperty</data>
+</node>
+<node id="ObjectProperty##activityHasOtherContext">
+	<data key="name">activityHasOtherContext</data>
+	<data key="expression">ObjectProperty</data>
+</node>
+<node id="ObjectProperty##activityHasStarttime">
+	<data key="name">activityHasStarttime</data>
+	<data key="expression">ObjectProperty</data>
+</node>
+<node id="ObjectProperty##hasTemperature">
+	<data key="name">hasTemperature</data>
+	<data key="expression">ObjectProperty</data>
+</node>
+
+<!-- ~~~~ nodes for Data Properties: 11 ~~~~ -->
+<node id="DataProperty##hasDayValue">
+	<data key="name">hasDayValue</data>
+	<data key="expression">DataProperty</data>
+</node>
+<node id="DataProperty##hasDisturbedNightValue">
+	<data key="name">hasDisturbedNightValue</data>
+	<data key="expression">DataProperty</data>
+</node>
+<node id="DataProperty##hasDurationValue">
+	<data key="name">hasDurationValue</data>
+	<data key="expression">DataProperty</data>
+</node>
+<node id="DataProperty##hasHourValue">
+	<data key="name">hasHourValue</data>
+	<data key="expression">DataProperty</data>
+</node>
+<node id="DataProperty##hasID">
+	<data key="name">hasID</data>
+	<data key="expression">DataProperty</data>
+</node>
+<node id="DataProperty##hasMinuteValue">
+	<data key="name">hasMinuteValue</data>
+	<data key="expression">DataProperty</data>
+</node>
+<node id="DataProperty##hasMonthValue">
+	<data key="name">hasMonthValue</data>
+	<data key="expression">DataProperty</data>
+</node>
+<node id="DataProperty##hasScheduledValue">
+	<data key="name">hasScheduledValue</data>
+	<data key="expression">DataProperty</data>
+</node>
+<node id="DataProperty##hasSecondValue">
+	<data key="name">hasSecondValue</data>
+	<data key="expression">DataProperty</data>
+</node>
+<node id="DataProperty##hasTemperatureValue">
+	<data key="name">hasTemperatureValue</data>
+	<data key="expression">DataProperty</data>
+</node>
+<node id="DataProperty##hasYearValue">
+	<data key="name">hasYearValue</data>
+	<data key="expression">DataProperty</data>
+</node>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~ EDGES: 33~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- edges for: Class##DisturbedNight (1) -->
+<edge source="Class##DisturbedNight" target="DataProperty##hasDisturbedNightValue">
+	<data key="weight">-1.0</data>
+</edge>
+
+<!-- edges for: Class##Duration (1) -->
+<edge source="Class##Duration" target="DataProperty##hasDurationValue">
+	<data key="weight">-1.0</data>
+</edge>
+
+<!-- edges for: Class##OtherContext (3) -->
+<edge source="Class##OtherContext" target="Class##DisturbedNight">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##OtherContext" target="Class##Scheduled">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##OtherContext" target="Class##UsingHeater">
+	<data key="weight">-1.0</data>
+</edge>
+
+<!-- edges for: Class##QualitativeTemperature (6) -->
+<edge source="Class##QualitativeTemperature" target="Class##Cold">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##QualitativeTemperature" target="Class##Cool">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##QualitativeTemperature" target="Class##Hot">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##QualitativeTemperature" target="Class##VeryCold">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##QualitativeTemperature" target="Class##VeryHot">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##QualitativeTemperature" target="Class##Warm">
+	<data key="weight">-1.0</data>
+</edge>
+
+<!-- edges for: Class##Scheduled (1) -->
+<edge source="Class##Scheduled" target="DataProperty##hasScheduledValue">
+	<data key="weight">-1.0</data>
+</edge>
+
+<!-- edges for: Class##Showering (4) -->
+<edge source="Class##Showering" target="DataProperty##hasID">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##Showering" target="ObjectProperty##activityHasDuration">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##Showering" target="ObjectProperty##activityHasOtherContext">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##Showering" target="ObjectProperty##activityHasStarttime">
+	<data key="weight">-1.0</data>
+</edge>
+
+<!-- edges for: Class##Temperature (2) -->
+<edge source="Class##Temperature" target="Class##QualitativeTemperature">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##Temperature" target="DataProperty##hasTemperatureValue">
+	<data key="weight">-1.0</data>
+</edge>
+
+<!-- edges for: Class##Timepoint (11) -->
+<edge source="Class##Timepoint" target="Class##Autumn">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##Timepoint" target="Class##Spring">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##Timepoint" target="Class##Summer">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##Timepoint" target="Class##Winter">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##Timepoint" target="DataProperty##hasDayValue">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##Timepoint" target="DataProperty##hasHourValue">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##Timepoint" target="DataProperty##hasMinuteValue">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##Timepoint" target="DataProperty##hasMonthValue">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##Timepoint" target="DataProperty##hasSecondValue">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##Timepoint" target="DataProperty##hasYearValue">
+	<data key="weight">-1.0</data>
+</edge>
+<edge source="Class##Timepoint" target="ObjectProperty##hasTemperature">
+	<data key="weight">-1.0</data>
+</edge>
+
+<!-- edges for: ObjectProperty##activityHasDuration (1) -->
+<edge source="ObjectProperty##activityHasDuration" target="Class##Duration">
+	<data key="weight">-1.0</data>
+</edge>
+
+<!-- edges for: ObjectProperty##activityHasOtherContext (1) -->
+<edge source="ObjectProperty##activityHasOtherContext" target="Class##OtherContext">
+	<data key="weight">-1.0</data>
+</edge>
+
+<!-- edges for: ObjectProperty##activityHasStarttime (1) -->
+<edge source="ObjectProperty##activityHasStarttime" target="Class##Timepoint">
+	<data key="weight">-1.0</data>
+</edge>
+
+<!-- edges for: ObjectProperty##hasTemperature (1) -->
+<edge source="ObjectProperty##hasTemperature" target="Class##Temperature">
+	<data key="weight">-1.0</data>
+</edge>
+
+</graph>
+</graphml>

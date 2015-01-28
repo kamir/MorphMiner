@@ -2,29 +2,30 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.bitocean</groupId>
     <artifactId>morphminer</artifactId>
-    <packaging>jar</packaging>
-    <version>0.9.1-SNAPSHOT</version>
-    <name>MorphMiner</name>
-    <url>http://semanpix.de/morphminer.org</url>
-    <properties>
-        <hadoopclient.version>2.5.0-cdh5.2.0</hadoopclient.version>
-        <sesame.version>2.7.1</sesame.version> 
-        <avro.version>1.7.4</avro.version>
-        <crunch.version>0.11.0-hadoop2</crunch.version>
-        <guava.version>11.0.2</guava.version> 
-        <maveneclipse.version>2.9</maveneclipse.version>
-        <mavenassembly.version>2.2.1</mavenassembly.version>
-        <cdk.version>0.9.2</cdk.version>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
-    </properties>
-    <dependencies>
+        <packaging>jar</packaging>
+        <version>0.9.1-SNAPSHOT</version>
+        <name>MorphMiner</name>
+        <url>http://semanpix.de/morphminer.org</url>
+        <properties>
+            <hadoopclient.version>2.5.0-cdh5.2.0</hadoopclient.version>
+            <sesame.version>2.7.1</sesame.version> 
+            <avro.version>1.7.4</avro.version>
+            <crunch.version>0.11.0-hadoop2</crunch.version>
+            <guava.version>11.0.2</guava.version> 
+            <maveneclipse.version>2.9</maveneclipse.version>
+            <mavenassembly.version>2.2.1</mavenassembly.version>
+            <cdk.version>0.9.2</cdk.version>
+            <maven.compiler.source>1.7</maven.compiler.source>
+            <maven.compiler.target>1.7</maven.compiler.target>
+        </properties>
+        
+        <dependencies>
         
         <dependency>
-	<groupId>org.slf4j</groupId>
-	<artifactId>slf4j-api</artifactId>
-	<version>1.7.7</version>
-</dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.7</version>
+        </dependency>
 
         
         <dependency>
@@ -33,11 +34,11 @@
             <version>1.9</version>
         </dependency>
 
-      <dependency>
-	<groupId>org.apache.httpcomponents</groupId>
-	<artifactId>httpclient</artifactId>
-	<version>4.3.6</version>
-</dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.3.6</version>
+        </dependency>
 
         
         <dependency>
@@ -300,7 +301,7 @@
         <dependency>
             <groupId>org.apache.etosha</groupId>
             <artifactId>Etosha-Core</artifactId>
-            <version>0.3.0-SNAPSHOT</version>
+            <version>0.4.1-SNAPSHOT</version>
             <type>jar</type>
         </dependency>
         

@@ -12,11 +12,13 @@ import java.util.logging.Logger;
  */
 public class SOLRTool extends ClusterGateway {
 
-    static String ZK = "172.16.14.228:2181/solr";
+    //static String ZK = "172.16.14.228:2181/solr";
+    static String ZK = "training01.sjc.cloudera.com:2181,training03.sjc.cloudera.com:2181,training06.sjc.cloudera.com:2181/solr";
     
     static String SOLR = "127.0.0.1:8983/solr";
     
-    static String HOME = "/home/cloudera";
+    // path on Gateway server in which all files are stored before ZOOKEEPER upload.
+    static String HOME = "/home/mirko.kaempf";
 
     static int SHARDS = 1;    
     
@@ -32,9 +34,10 @@ public class SOLRTool extends ClusterGateway {
         
         String collection = "FAQMails02";
 
-        SOLRTool.init( "127.0.0.1" , "cloudera" , "cloudera" );
+        SOLRTool.init( SOLR , "mirko.kaempf" , "MUvup3uT" );
+//        SOLRTool.init( "127.0.0.1" , "cloudera" , "cloudera" );
         
-        SOLRTool.prepareCollection( "127.0.0.1:2181/solr", collection );
+        // SOLRTool.prepareCollection( "127.0.0.1:2181/solr", collection );
         
         SOLRTool.close();
         
@@ -46,7 +49,8 @@ public class SOLRTool extends ClusterGateway {
 
     public static void listCollection() {
          
-        String cmd1 = "solrctl --solr " + SOLR + " --zk " + ZK + " instancedir --list";
+//        String cmd1 = "solrctl --solr " + SOLR + " --zk " + ZK + " instancedir --list";
+        String cmd1 = "solrctl --zk " + ZK + " instancedir --list";
 
         if ( bw != null ) {
             try {
@@ -67,9 +71,12 @@ public class SOLRTool extends ClusterGateway {
 
     public static void prepareCollection(String zk, String coll) {
          
-        String cmd1 = "solrctl --solr " + SOLR + " --zk " + ZK + " instancedir --generate " + HOME + "/" + coll + "SearchConfig";
-        String cmd2 = "solrctl --solr " + SOLR + " --zk " + ZK + " instancedir --create " + coll + "Collection " + HOME + "/" + coll + "SearchConfig";
-        String cmd3 = "solrctl --solr " + SOLR + " --zk " + ZK + " collection --create " + coll + "Collection -s " + SHARDS; 
+//        String cmd1 = "solrctl --solr " + SOLR + " --zk " + ZK + " instancedir --generate " + HOME + "/" + coll + "SearchConfig";
+//       String cmd2 = "solrctl --solr " + SOLR + " --zk " + ZK + " instancedir --create " + coll + "Collection " + HOME + "/" + coll + "SearchConfig";
+//        String cmd3 = "solrctl --solr " + SOLR + " --zk " + ZK + " collection --create " + coll + "Collection -s " + SHARDS; 
+        String cmd1 = "solrctl --zk " + ZK + " instancedir --generate " + HOME + "/" + coll + "SearchConfig";
+        String cmd2 = "solrctl --zk " + ZK + " instancedir --create " + coll + "Collection " + HOME + "/" + coll + "SearchConfig";
+        String cmd3 = "solrctl --zk " + ZK + " collection --create " + coll + "Collection -s " + SHARDS; 
 
         if ( bw != null ) {
             try {
@@ -110,8 +117,10 @@ public class SOLRTool extends ClusterGateway {
         System.out.println("local file      : " + fnLocal);
         System.out.println("remote file     : " + fnRemote);
         
-        String cmd3 = "solrctl --solr " + SOLR + " --zk " + ZK + " instancedir --update " + coll + "Collection " + HOME + "/" + coll + "SearchConfig"; // -s " + SHARDS; 
-        String cmd4 = "solrctl --solr " + SOLR + " --zk " + ZK + " collection --reload " + coll + "Collection"; // -s " + SHARDS; 
+//        String cmd3 = "solrctl --solr " + SOLR + " --zk " + ZK + " instancedir --update " + coll + "Collection " + HOME + "/" + coll + "SearchConfig"; // -s " + SHARDS; 
+//        String cmd4 = "solrctl --solr " + SOLR + " --zk " + ZK + " collection --reload " + coll + "Collection"; // -s " + SHARDS; 
+        String cmd3 = "solrctl --zk " + ZK + " instancedir --update " + coll + "Collection " + HOME + "/" + coll + "SearchConfig"; // -s " + SHARDS; 
+        String cmd4 = "solrctl --zk " + ZK + " collection --reload " + coll + "Collection"; // -s " + SHARDS; 
 
         tool.open();
         tool.scpTo(fnLocal, fnRemote, cmd3);

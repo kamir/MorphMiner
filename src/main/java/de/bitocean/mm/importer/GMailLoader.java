@@ -51,8 +51,8 @@ public class GMailLoader {
     static String collection = "dafault";
 
     public static void init() throws Exception {
-        // zkHostString = "training01.sjc.cloudera.com:2181,training03.sjc.cloudera.com:2181,training06.sjc.cloudera.com:2181/solr";
-        zkHostString = "127.0.0.1:2181/solr";
+        zkHostString = "training01.sjc.cloudera.com:2181,training03.sjc.cloudera.com:2181,training06.sjc.cloudera.com:2181/solr";
+        // zkHostString = "127.0.0.1:2181/solr";
         solr = new CloudSolrServer(zkHostString);
     }
 
