@@ -1,4 +1,4 @@
-package de.bitocean.mm;
+package de.bitocean.mm.importer;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -6,13 +6,12 @@ import java.io.FileReader;
 import javax.swing.JFrame;
 import org.semanpix.parser.TikaGUI;
 import org.apache.tika.metadata.*;
-import visualtools.connectors.PropertyFieldMatcher;
 
 /**
  *
  * @author kamir
  */
-class PDFImporter {
+public class PDFImporter {
 
     public static String PDF_BASEPATH = "/Users/" + System.getProperty("user.name") + "/Desktop";  
     

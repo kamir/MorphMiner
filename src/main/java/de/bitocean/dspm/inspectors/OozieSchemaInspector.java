@@ -20,6 +20,9 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -37,15 +40,17 @@ import org.xml.sax.SAXException;
  *
  * @author kamir
  */
-public class SOLRSchemaInspector {
+public class OozieSchemaInspector {
 
     String schema = null;
     String fileName = null;
+    String urlS = null;
 
     DocumentBuilderFactory builderFactory = null;
     DocumentBuilder builder = null;
 
-    private SOLRSchemaInspector() {    }
+    private OozieSchemaInspector() {
+    }
 
     /**
      * Load from a File ...
@@ -53,37 +58,38 @@ public class SOLRSchemaInspector {
      * @param fileName
      * @throws XPathExpressionException
      */
-    public void listAllFields(String fn) throws XPathExpressionException {
+    public void listAllActions() throws XPathExpressionException {
 
         builderFactory = DocumentBuilderFactory.newInstance();
-
         builder = null;
 
         try {
 
-            fileName = fn;
-            
+            builder = builderFactory.newDocumentBuilder();
+
+//            Document document = getDocumentFromUrl();
             Document document = getDocumentFromFile();
 
             XPath xPath = XPathFactory.newInstance().newXPath();
 
-            String expression = "/schema/fields/field";
+            String expression = "/workflow-app/action";
 
-//            String email = xPath.compile(expression).evaluate(document);
-//
-//            Node node = (Node) xPath.compile(expression).evaluate(document, XPathConstants.NODE);
+            System.out.println(">> expression: " + expression);
 
             NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(document, XPathConstants.NODESET);
 
+            System.out.println(nodeList.getLength());
+
             for (int i = 0; i < nodeList.getLength(); i++) {
+
                 Element show = (Element) nodeList.item(i);
 
                 System.out.print(show.getAttribute("name"));
-                System.out.print(", " + show.getAttribute("type"));
-                System.out.print(", " + show.getAttribute("required"));
-                System.out.print(", " + show.getAttribute("indexed"));
-                System.out.print(", " + show.getAttribute("stored"));
-                System.out.println(", " + show.getAttribute("multivalued"));
+//                System.out.print(", " + show.getAttribute("type"));
+//                System.out.print(", " + show.getAttribute("required"));
+//                System.out.print(", " + show.getAttribute("indexed"));
+//                System.out.print(", " + show.getAttribute("stored"));
+//                System.out.println(", " + show.getAttribute("multivalued"));
             }
 
         } catch (Exception e) {
@@ -94,40 +100,30 @@ public class SOLRSchemaInspector {
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
 
-        File f = new File("./morphline-projects/FAQMails02/conf/schema.xml");
-
-        SOLRSchemaInspector solrInsp = new SOLRSchemaInspector();
-
+        File f = new File("./morphline-projects/FAQMails02/mr-action.xml");
+        
+        OozieSchemaInspector solrInsp = new OozieSchemaInspector();
+//        solrInsp.urlS = "https://github.com/rkanter/oozie-subwf-repeat-example/raw/master/src/main/subwf-repeat/mr-action.xml";
+        solrInsp.fileName = f.getAbsolutePath();
+        
+        
 //        StringBuffer sb = new StringBuffer();
 //
 //        BufferedReader br = new BufferedReader(new FileReader(f));
 //        while (br.ready()) {
 //            sb.append(br.readLine() + "");
 //        }
+        
+        
         try {
-            solrInsp.listAllFields(f.getAbsolutePath());
+            solrInsp.listAllActions();
         } catch (XPathExpressionException ex) {
-            Logger.getLogger(SOLRSchemaInspector.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(OozieSchemaInspector.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
 
-    private Document getDocumentFromFile() throws Exception {
-        builderFactory = DocumentBuilderFactory.newInstance();
-        builder = builderFactory.newDocumentBuilder();
-        Document doc = builder.parse(new FileInputStream(fileName));
-        return doc;
-    }
-
-    private Document getDocumentFromString() throws Exception {
-        builderFactory = DocumentBuilderFactory.newInstance();
-        builder = builderFactory.newDocumentBuilder();
-        InputStream stream = new ByteArrayInputStream(schema.getBytes(StandardCharsets.UTF_8));
-        Document document = builder.parse(stream);
-        return document;
-    }
-
-    public SOLRSchemaInspector(String s) {
+    public OozieSchemaInspector(String s) {
         schema = s;
     }
 
@@ -196,5 +192,44 @@ public class SOLRSchemaInspector {
             s = string;
         }
         return s;
+    }
+
+    private Document getDocumentFromFile() throws Exception {
+        builderFactory = DocumentBuilderFactory.newInstance();
+        Document doc = builder.parse(new FileInputStream(fileName));
+        return doc;
+    }
+
+    private Document getDocumentFromString() throws Exception {
+        builder = builderFactory.newDocumentBuilder();
+        InputStream stream = new ByteArrayInputStream(schema.getBytes(StandardCharsets.UTF_8));
+        Document document = builder.parse(stream);
+        return document;
+    }
+
+    private Document getDocumentFromUrl() {
+
+        System.out.println(">>> " + urlS);
+
+        Document doc = null;
+        URL url = null;
+
+        try {
+            
+            url = new URL(urlS);
+
+            builderFactory = DocumentBuilderFactory.newInstance();
+
+            doc = builder.parse(url.openStream());
+
+        } catch (MalformedURLException ex) {
+            Logger.getLogger(OozieSchemaInspector.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SAXException ex) {
+            Logger.getLogger(OozieSchemaInspector.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(OozieSchemaInspector.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return doc;
     }
 }

@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 package de.bitocean.mm;
-
+ 
 import de.bitocean.mm.importer.EmailImport;
+import de.bitocean.mm.importer.PDFImporter;
 import de.bitocean.mm.importer.ResultLineImporter;
 import java.io.File;
 import java.io.IOException;
