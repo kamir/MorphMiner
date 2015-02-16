@@ -60,10 +60,15 @@ public class ClusterGateway {
     }
     
     public static void init(String h, String u, String p) throws IOException {
-         //if ( tool == null )
-         tool = new ClusterGateway( h , u , p );
+
+        if ( p == null ) {
+            p = javax.swing.JOptionPane.showInputDialog("Password for ("+u+"): ");
+        }
+        
+        tool = new ClusterGateway( h , u , p );
          
          String SOLRHost = h + ":8983/solr";
+
          SOLRTool.SOLR = SOLRHost;
          
          System.out.println( "\n### ClusterGateway : " + u + "@" + h );
@@ -73,6 +78,12 @@ public class ClusterGateway {
          initDebugScripter();
     }
     
+    /**
+     * 
+     * For easy debugging the remote commands are collected.
+     * 
+     * @throws IOException 
+     */
     public static void initDebugScripter() throws IOException {
         File f = File.createTempFile("debug_solrctl_script_", ".sh", new File("./tmp") );
         
@@ -81,10 +92,18 @@ public class ClusterGateway {
         bw = new BufferedWriter( new FileWriter( f ) );
     }
     
+    
+    /**
+     * Copy a file to the Gateway-Node.
+     *
+     */
     public void scpTo(String l , String r, String cmd) {
         try {
             // https://code.google.com/p/sshxcute/
 
+            System.out.println("\n[SCP]: " + l + "=> " + r + "\n");
+       
+            
             // CustomTask ct1 = new ExecShellScript("/home/tsadmin","./sshxcute_test.sh","hello world");
             ssh.connect();  // After connection
             ssh.uploadSingleDataToServer(l, r);
@@ -96,6 +115,12 @@ public class ClusterGateway {
         }
     }
             
+    
+    /**
+     * Execute some remote tasks ...
+     * 
+     * @param cmd 
+     */
     public void executeRemoteCommand(String cmd) {
         try {
             // https://code.google.com/p/sshxcute/

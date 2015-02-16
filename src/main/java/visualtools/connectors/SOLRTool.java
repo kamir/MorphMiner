@@ -8,6 +8,9 @@ import java.util.logging.Logger;
 
 /**
  *
+ * The SOLR tool is the component to talk to zookeeper and to use the 
+ * solrctl command on a cluster Gateway-Node.
+ * 
  * @author kamir
  */
 public class SOLRTool extends ClusterGateway {
@@ -20,7 +23,11 @@ public class SOLRTool extends ClusterGateway {
     // path on Gateway server in which all files are stored before ZOOKEEPER upload.
     static String HOME = "/home/mirko.kaempf";
 
+    /**
+     * The default number of shards for collection creation.
+     */ 
     static int SHARDS = 1;    
+    
     
     public static String projectContext = null;
         
@@ -34,7 +41,7 @@ public class SOLRTool extends ClusterGateway {
         
         String collection = "FAQMails02";
 
-        SOLRTool.init( SOLR , "mirko.kaempf" , "MUvup3uT" );
+        SOLRTool.init( SOLR , "mirko.kaempf" , null );
 //        SOLRTool.init( "127.0.0.1" , "cloudera" , "cloudera" );
         
         // SOLRTool.prepareCollection( "127.0.0.1:2181/solr", collection );
@@ -151,12 +158,19 @@ public class SOLRTool extends ClusterGateway {
     
     public static void setProjectContext(File selectedFile) {
         projectContext = selectedFile.getAbsolutePath();
-        
-  
-
-        
     }
 
+    /**
+     * 
+     * TODO: 
+     * 
+     * All available Collection should be listed, followed by the number
+     * of documents in it.
+     */
+    public static void openCollectionListFrame() {
+        
+    }
+    
     public static void flushDebugScript() throws IOException {
         bw.flush();
         bw.close();

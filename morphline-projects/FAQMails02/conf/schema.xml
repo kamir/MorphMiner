@@ -115,9 +115,16 @@
 
    <field name="type" type="string" indexed="true" stored="true"/>
    <field name="author"  type="text_general" indexed="true" stored="true"/>
-   <field name="context" type="string" indexed="true" stored="true" />
-   
+   <field name="context" type="string" indexed="true" stored="true" multiValued="true" />
+
+   <field name="indexer" type="string" indexed="true" stored="true" />
+   <field name="visibility" type="string" indexed="true" stored="true" default="internal" />
+
+   <field name="modificationTime" type="date" indexed="true" stored="true" />
+
    <field name="_version_" type="long" indexed="true" stored="true"/>
+
+   
 
    <!--
      Some fields such as popularity and manu_exact could be modified to
