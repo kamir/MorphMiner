@@ -17,27 +17,32 @@ public class PDFImporter {
     
     public static void main(String[] args) throws Exception {
 
-        File f = new File( PDF_BASEPATH );
+        File fPDF = new File( PDF_BASEPATH );
 
         javax.swing.JFileChooser jfc = new javax.swing.JFileChooser();
         int returnVal = jfc.showOpenDialog( new JFrame() );
-        f = jfc.getSelectedFile();
+        fPDF = jfc.getSelectedFile();
+        
+        System.out.println( ">>> (PDF) f=" + fPDF.getAbsolutePath() );
 
-        Metadata md = TikaGUI.getMetadataFromFile( f );
+        Metadata md = TikaGUI.getMetadataFromFile( fPDF );
         String textContent = TikaGUI.getTextContent();
 
         javax.swing.JFileChooser jfc2 = new javax.swing.JFileChooser();
         int returnVal2 = jfc.showOpenDialog( new JFrame() );
-        File f2 = jfc.getSelectedFile();
-        
+        File fSCHEMA = jfc.getSelectedFile();
+
+        System.out.println( ">>> (SCHEMA) f2=" + fSCHEMA.getAbsolutePath() );
+
         StringBuffer sb = new StringBuffer();
-        BufferedReader br = new BufferedReader( new FileReader( f2 ) );
+        BufferedReader br = new BufferedReader( new FileReader( fSCHEMA ) );
         while( br.ready() ) {
             sb.append( br.readLine() + "\n" );
         }
+        String SCHEMAXML = sb.toString();
         
         PropertyFieldMatcher pfm = new PropertyFieldMatcher();
-        pfm.process( md, f, sb.toString(), textContent );
+        pfm.process( md, fPDF, SCHEMAXML, textContent );
         
     }
     

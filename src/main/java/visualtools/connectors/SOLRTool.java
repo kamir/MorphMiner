@@ -15,6 +15,9 @@ import java.util.logging.Logger;
  */
 public class SOLRTool extends ClusterGateway {
 
+    
+    static String GWHOST = "training09.mtv.cloudera.com";
+    
     //static String ZK = "172.16.14.228:2181/solr";
     static String ZK = "training01.sjc.cloudera.com:2181,training03.sjc.cloudera.com:2181,training06.sjc.cloudera.com:2181/solr";
     
@@ -22,6 +25,9 @@ public class SOLRTool extends ClusterGateway {
     
     // path on Gateway server in which all files are stored before ZOOKEEPER upload.
     static String HOME = "/home/mirko.kaempf";
+
+    // path of Collections in HDFS
+    static String DATAHOME = "/solr";
 
     /**
      * The default number of shards for collection creation.
@@ -41,7 +47,7 @@ public class SOLRTool extends ClusterGateway {
         
         String collection = "FAQMails02";
 
-        SOLRTool.init( SOLR , "mirko.kaempf" , null );
+        SOLRTool.init( GWHOST , "mirko.kaempf" , null );
 //        SOLRTool.init( "127.0.0.1" , "cloudera" , "cloudera" );
         
         // SOLRTool.prepareCollection( "127.0.0.1:2181/solr", collection );
@@ -55,6 +61,10 @@ public class SOLRTool extends ClusterGateway {
     }    
 
     public static void listCollection() {
+        listCollection( true );   
+    }
+
+    public static void listCollection(boolean closeAtEnd) {
          
 //        String cmd1 = "solrctl --solr " + SOLR + " --zk " + ZK + " instancedir --list";
         String cmd1 = "solrctl --zk " + ZK + " instancedir --list";
@@ -69,11 +79,47 @@ public class SOLRTool extends ClusterGateway {
         }
         
         tool.open();
-        
+         
         tool.executeRemoteCommand( cmd1 );
        
-        tool.close();
+        if( closeAtEnd ) tool.close();
        
+    }
+    
+    /**
+     * The current collection has to be optimized and copied to local disc for 
+     * DOWNLOAD and of data and configuration. 
+     * 
+     * @param zk
+     * @param coll 
+     */
+    public static void packageCollection(String zk, String coll) {
+
+        tool.open();
+        
+        String locationOfCFG =  HOME + "/" + coll + "SearchConfig";
+        
+        String locationOfDATA = DATAHOME + "/" + coll + "Collection";
+
+        System.out.println( ">> Instancedir: " + locationOfCFG );
+        System.out.println(  ">> Datadir:    " + locationOfDATA );
+ 
+        String tempDirName = System.currentTimeMillis() + ".stage";
+
+        tool.executeRemoteCommand( "mkdir " + "/data/2/tmp/" + tempDirName );
+        tool.executeRemoteCommand( "mkdir " + "/data/2/tmp/" + tempDirName + "/data" );
+        
+        tool.executeRemoteCommand( "cp -r " + locationOfCFG + " /data/2/tmp/" + tempDirName + "/cfg/" );
+        tool.executeRemoteCommand( "hadoop fs -get " + locationOfDATA + " /data/2/tmp/" + tempDirName + "/data/" );
+
+        tool.executeRemoteCommand( "tar cfzv /data/2/tmp/TTFAQ_package_" + tempDirName + ".tar.gz /data/2/tmp/" + tempDirName );
+        
+        tool.executeRemoteCommand( "ls -sh /data/2/tmp/");
+        
+        tool.scpTo(zk, zk, coll);
+        
+        
+        
     }
 
     public static void prepareCollection(String zk, String coll) {

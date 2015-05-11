@@ -114,7 +114,8 @@ public class ClusterGateway {
             Logger.getLogger(SOLRTool.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-            
+     
+  
     
     /**
      * Execute some remote tasks ...
@@ -129,7 +130,9 @@ public class ClusterGateway {
             
             CustomTask ct1 = new ExecCommand( cmd );
             ssh.exec(ct1);
-                    
+            
+            System.out.println("\n[DONE]\n");
+            
         } 
         catch (Exception ex) {
             Logger.getLogger(SOLRTool.class.getName()).log(Level.SEVERE, null, ex);
@@ -138,8 +141,10 @@ public class ClusterGateway {
     
     public static void close() {
         
-            tool.ssh.disconnect();
-    
+            if ( tool != null ) {
+                if ( tool.ssh != null )
+                    tool.ssh.disconnect();
+            }
     }
       
     public boolean open() {
